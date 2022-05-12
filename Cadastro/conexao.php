@@ -7,7 +7,7 @@
 		public static function getConexao()
 		{
 			if(!isset(self::$instancia)){
-				self::$instancia = new PDO('mysql:host=localhost; dbname=tcc_cs; charset=utf8', 'root', 'vertrigo');
+				self::$instancia = new PDO('mysql:host=localhost; dbname=tcc_cs; charset=utf8', 'root', '');
 				return self::$instancia;
 			}else{
 				return self::$instancia;
