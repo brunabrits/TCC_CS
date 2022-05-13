@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include('conexao.php');
+include('conexaoLogin.php');
 
 if(empty($_POST['usuario'] || empty($_POST['senha']))) {
     header('Location: entrar.html');
