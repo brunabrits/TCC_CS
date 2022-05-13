@@ -12,6 +12,11 @@
 
       <style>
 
+        *{
+          font-family: Arial, Helvetica, sans-serif;
+
+         }
+
         @media (min-width: 768px){
           .ladinho{
             margin-left:65% !important;
@@ -19,10 +24,7 @@
           }
         }
 
-       
-        
         .texto{
-          /*background-color: pink;*/
           margin: 5%;
           margin-top: 8%;
           margin-right: 5%;
@@ -39,27 +41,87 @@
       
         img{
          width:100%;
-         /*height:650%;*/
-        }
       
+        }     
 
         .test{
           display: inline-block;
           width: 55%;
           height: 55%;
-          /*margin: 5%;
-          margin-top: 10%;
-          padding:30px;
-          width: 65%;*/
-        }
         
-        /*div{
-          display: inline-block;
-          width: 100px;
-          height: 100px;
+        }
 
-        }*/
-    
+        .container{
+            width: 1150px;
+            padding: 20px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .container .card{
+          position: relative;
+          padding: 10px;
+          width: 300px;
+          background-color: white;
+          margin: 20px;
+          border: 1px solid black;
+          border-radius: 20px;
+          overflow: hidden;
+          transition: 0.5s;
+          text-align: center;
+        }
+
+        .container .card img{
+          transition: 0.5s;
+          width:200px ;
+          height:200px ;
+
+        }
+
+        .container .card h1{
+          font-size: 2rem;
+
+         }
+
+         .container .card .content{
+           padding: 20px;
+           text-align: center;
+         }
+
+         .container .card .content p{
+           color: #666;
+         }
+
+        .container .card:hover{
+           background-color:  rgb(75,0,130);
+           color: white;
+           margin-top:-30px;
+           box-shadow: 2px 20px 25px #dc2e685d;
+           border-color:  rgb(75,0,130);
+        }
+
+        .container .card:hover img{
+            filter: invert(1);
+            width:55% ;
+            height:55% ;
+        }
+
+        .container .card:houver .content p{
+          color: white;
+        }
+
+        .balao {
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+
+
+        }
+
+
 
 
       </style>
@@ -111,19 +173,71 @@
     </nav><!--fim nav-->
     
     <section>
-
     <div class="texto">
       <h2>Layout Container</h2><br><br>
       <p>The w3-cell-row class stretches the elements to fit the page width,Resize the browser window to see the effect.</p>
     </div>
 
     <div class="test">  
-      <img src="tccimg.webp">
+      <img src="includes/telaPrincipal/homeimg.webp">
+    </div>
+    </section>
+
+
+  <section class="balao"> 
+    
+    <div class="container">
+        <div class="card">
+            <div class="img">
+               <img src="https://cdn-icons.flaticon.com/png/512/4435/premium/4435912.png?token=exp=1652467742~hmac=14461f283d5871d20dc5b6cd8922bb6f">
+             </div>
+          <h1>Gráficos inteligentes</h1>
+          <div class="content">
+            <p>
+               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+               Consequuntur soluta animi placeat vitae officiis quo neque inventore, 
+               dolorem error quas, molestiae fuga ipsum qui doloribus asper dos
+               
+            </p>     
+       </div>
     </div>
 
+    <div class="card">
+            <div class="img">
+               <img src="https://cdn-icons-png.flaticon.com/512/3126/3126647.png">
+          </div>
+          <h1>Pesquisas elaboradas para seus clientes</h1>
+          <div class="content">
+            <p>
+               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+               Consequuntur soluta animi placeat vitae dolorem error quas, dolorem error quas, molestiae 
+            </p>     
+       </div>
+    </div>
 
-    </section>
+    <div class="card">
+            <div class="img">
+               <img src="https://cdn-icons.flaticon.com/png/512/2612/premium/2612924.png?token=exp=1652472684~hmac=1214b73a3e9cb0c17b44b69db247d322">
+          </div>
+          <h1>Relatórios prontos para minimizar seu tempo</h1>
+          <div class="content">
+            <p>
+               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+               Consequuntur soluta animi placeat vitae officiis quo neque inventore, 
+               dolorem error quas, 
+            </p>     
+       </div>
+    </div>
+  </div>
+
+         
+
     
+
+
+
+
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
