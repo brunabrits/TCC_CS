@@ -166,7 +166,7 @@
         </ul>
 
         <div class="ladinho">
-          <button type="button" class="btn btn-outline-light  mr-3 ">Login</button> 
+          <button type="button" class="btn btn-outline-light  mr-3 "><a href="../TCC_CS/includes/telaLogin/entrar.php">Login</a></button> 
           <button type="button" class="btn btn-outline-light">Cadastre-se</button>
         </div><!--fim ladinho-->
       </div><!--fim collapse navbar-collapse-->
