@@ -16,7 +16,7 @@ session_start()
 
 <body>
     <center>
-        <img class="logo" src="img/logo.jpg" alt="">
+        <img class="logo" src="img/logo.png" alt="">
     </center>
 
     <section class="menu">

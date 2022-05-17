@@ -189,14 +189,13 @@
     <div class="container">
         <div class="card">
             <div class="img">
-               <img src="https://cdn-icons.flaticon.com/png/512/4435/premium/4435912.png?token=exp=1652467742~hmac=14461f283d5871d20dc5b6cd8922bb6f">
+               <img src="includes/telaPrincipal/grafico.png">
              </div>
           <h1>Gráficos inteligentes</h1>
           <div class="content">
             <p>
-               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-               Consequuntur soluta animi placeat vitae officiis quo neque inventore, 
-               dolorem error quas, molestiae fuga ipsum qui doloribus asper dos
+            Através das pesquisas são gerados gráficos que apresentam o 
+            feedback do seus clientes sobre os serviços e/ou produtos da empresa.
                
             </p>     
        </div>
@@ -209,15 +208,14 @@
           <h1>Pesquisas elaboradas para seus clientes</h1>
           <div class="content">
             <p>
-               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-               Consequuntur soluta animi placeat vitae dolorem error quas, dolorem error quas, molestiae 
+            Tenha acesso aos melhores formulários elaborados para seus clientes, e escolha o modelo ideal que combine com sua empresa
             </p>     
        </div>
     </div>
 
     <div class="card">
             <div class="img">
-               <img src="https://cdn-icons.flaticon.com/png/512/2612/premium/2612924.png?token=exp=1652472684~hmac=1214b73a3e9cb0c17b44b69db247d322">
+               <img src="includes/telaPrincipal/tempo-rapido.png">
           </div>
           <h1>Relatórios prontos para minimizar seu tempo</h1>
           <div class="content">
@@ -230,6 +228,7 @@
     </div>
   </div>
 
+  
          
 
     
