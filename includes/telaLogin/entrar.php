@@ -24,7 +24,7 @@ session_start()
             <div class="menu-login">
                 <h1>Login</h1>
 
-                <input type="text" name="usuario" id="" placeholder="Email"><br><br>
+                <input type="email" name="email" id="" placeholder="Email"><br><br>
                 <input type="password" name="senha" id="" placeholder="Senha"><br><br>
 
                 <button class="btn">Entrar</button>

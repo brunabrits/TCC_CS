@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!$_SESSION['usuario']) {
+if(!$_SESSION['email']) {
     header('Location: entrar.php');
     exit();
 }
