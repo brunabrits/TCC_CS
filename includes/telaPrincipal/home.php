@@ -121,7 +121,62 @@
 
         }
 
+        a{
+          color: #fff;
+        }
 
+        .midias-sociais{
+          position: relative;
+          width: 20px;
+          height: 20px;
+        } 
+
+       /*fotter*/
+
+        footer{
+           background-color:rgb(75,0,130);
+           padding: 50px 0; 
+        }
+
+        .container-footer{
+          max-width: 1400px;
+          padding 0 4%;
+          margin: auto;
+        }
+
+        .row-footer{
+           display: flex;
+           flex-wrap: wrap;
+        }
+
+        .footer-col{
+           width: 25%;
+           padding: 0 15px:
+        }
+
+        .footer-col h4{
+           font-size: 22px;
+           color: white;
+           margin-bottom: 20px;
+           font-weight:500;
+           position: relative;
+           text-transform: uppercase;
+        }
+
+        .footer-col ul{
+          list-style: none;
+        }
+
+        .footer-col ul li{
+           margin: 10px 0;
+        }
+
+        .footer-col ul li a{
+           font-size: 16px;
+
+        }
+  
+        /*fim footer*/
 
 
       </style>
@@ -166,8 +221,8 @@
         </ul>
 
         <div class="ladinho">
-          <button type="button" class="btn btn-outline-light  mr-3 "><a href="../TCC_CS/includes/telaLogin/entrar.php">Login</a></button> 
-          <button type="button" class="btn btn-outline-light">Cadastre-se</button>
+          <button type="button" class="btn btn-outline-light  mr-3 "><a href="../TCC_CS/includes/telaLogin/entrar.php" style="text-decoration:none" >Login</a></button> 
+          <button type="button" class="btn btn-outline-light" style="text-decoration:none" >Cadastre-se</button>
         </div><!--fim ladinho-->
       </div><!--fim collapse navbar-collapse-->
     </nav><!--fim nav-->
@@ -175,7 +230,7 @@
     <section>
     <div class="texto">
       <h2>Layout Container</h2><br><br>
-      <p>The w3-cell-row class stretches the elements to fit the page width,Resize the browser window to see the effect.</p>
+      <p>The w3-cell-row class stretches the elements</p>
     </div>
 
     <div class="test">  
@@ -227,8 +282,62 @@
        </div>
     </div>
   </div>
+  </section>
 
-  
+  <footer>
+     <div class="container-footer">
+        <div class="row-footer">
+         <!--  footer col -->
+          <div class="footer-col">
+              <h4>Empresa</h4>
+              <ul>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing eli.</p>
+              </ul>
+          </div>
+         <!-- end footer col -->
+           <!--  footer col -->
+           <div class="footer-col">
+              <h4>Criadores</h4>
+              <ul>
+                   <p>Alice<br>Bruna<br>Dandara<br>Lucas<br>Silas<br></p>
+              </ul>
+          </div>
+         <!-- end footer col -->
+           <!--  footer col -->
+           <div class="footer-col">
+              <h4>Contatos</h4>
+              <ul>
+                   <p></p>
+              </ul>
+          </div>
+         <!-- end footer col -->
+          <!--  footer col -->
+          <div class="footer-col">
+              <h4>Contatos</h4>
+              <!-- form sub -->
+              <div class="form-sub">
+                  <form>
+                    <input type="email" placeholder="Digite o seu e-mail" required><br>
+                    <label for="mensagem">Mensagem</label><br>
+                  	<textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" rows="4" cols="40"></textarea><br>
+                    <button>Enviar</button>
+                  </form>    
+              </div>
+              <!-- end form sub -->
+              <!--
+              <div class="midias-sociais">
+                  <a href=""><img border="0" src="includes/telaPrincipal/img/facebook.png"></a>
+                  <a href=""><img border="0" src="includes/telaPrincipal/img/instagram.png"></a>
+                  <a href=""><img border="0" src="includes/telaPrincipal/img/twitter.png"></a>
+              </div>
+              -->
+           </div> <!-- end footer col -->
+
+        </div>
+     </div>
+  </footer>
+
+
          
 
     
