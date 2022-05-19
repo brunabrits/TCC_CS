@@ -1,21 +1,21 @@
 <?php
 session_start();
 
-include('conexaoLogin.php');
+include('conexao.php');
 
 if(empty($_POST['email'] || empty($_POST['senha']))) {
     header('Location: entrar.html');
     exit();
 }
 
-$email = mysqli_real_escape_string($conexao, $_POST['email']);
-$senha   = mysqli_real_escape_string($conexao, $_POST['senha']);
+$email  = mysqli_real_escape_string($instancia, $_POST['email']);
+$senha  = mysqli_real_escape_string($instancia, $_POST['senha']);
 
-$query   = "select usuario_id, usuario from usuario where usuario ='{$email}' and senha =md5('{$senha}')";
+$query  = "select id_cliente, email from Clientes where email ='{$email}' and senha =md5('{$senha}')";
 
-$result  = mysqli_query($conexao, $query);
+$result = mysqli_query($instancia, $query);
 
-$row = mysqli_num_rows($result);
+$row    = mysqli_num_rows($result);
 
 if($row == 1) {
     $_SESSION['email'] = $email;

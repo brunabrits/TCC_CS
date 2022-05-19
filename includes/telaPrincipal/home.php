@@ -222,7 +222,7 @@
 
         <div class="ladinho">
           <button type="button" class="btn btn-outline-light  mr-3 "><a href="../TCC_CS/includes/telaLogin/entrar.php" style="text-decoration:none" >Login</a></button> 
-          <button type="button" class="btn btn-outline-light" style="text-decoration:none" >Cadastre-se</button>
+          <button type="button" class="btn btn-outline-light" style="text-decoration:none" ><a href="../TCC_CS/Cadastro/telaCadastro.php">Cadastre-se</a></button>
         </div><!--fim ladinho-->
       </div><!--fim collapse navbar-collapse-->
     </nav><!--fim nav-->
