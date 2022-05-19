@@ -3,16 +3,11 @@
 
 class Clientes
 {	
-	//variável global
-	private $nome, $renda_familiar, $cod_clientes, $idade;
+	private $id_cliente, $nome, $email, $senha;
 
 	
-	public function getCod_clientes(){
-		return $this->cod_clientes;
-	}
-
-	public function setCod_clientes($cod_clientes){
-		$this->cod_clientes= $cod_clientes;
+	public function getId_cliente(){
+		return $this->id_cliente;
 	}
 
 	public function getNome(){
@@ -22,25 +17,19 @@ class Clientes
 	public function setNome($nome){
 		$this->nome = $nome;
 	}
-	public function getIdade(){
-		return $this->idade;
+	public function getEmail(){
+		return $this->email;
 	}
 
-    public function setIdade($idade){
-	    $this->idade= $idade;
+    public function setEmail($email){
+	    $this->email= $email;
     }
 
-	public function getRenda_familiar(){
-		return $this->renda_familiar;
+	public function getSenha(){
+		return $this->senha;
 	}
 
-	public function setRenda_familiar($renda_familiar){
-		$this->renda_familiar= $renda_familiar;
+	public function setSenha($senha){
+		$this->senha= $senha;
 	}
-
-	public function __toString()
-   {
-     return $this->cod_clientes . ' '. $this->nome . ' ' . $this->idade . ' ' . $this->renda_familiar;
-   }
-
 }

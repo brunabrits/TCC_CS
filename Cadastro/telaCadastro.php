@@ -36,22 +36,16 @@
 	<br>
 	<div class="row">
 		<div class="col-md-12">
-			<form action="controle.php" method="POST">
-				<p><input type="text" class="form-control" name="cod_clientes" placeholder="cod_clientes"></p>
+			<form action="controle.php" method="GET">
+				
 				<p><input type="text" class="form-control" name="nome" placeholder="nome"></p>
-				<p><input type="text"  class="form-control" name="idade" placeholder="idade"></p>
-				<p><input type="text" class="form-control" name="renda_familiar" placeholder="renda_familiar"></p>
+				<p><input type="text" class="form-control" name="email" placeholder="email"></p>
+				<p><input type="password" class="form-control" name="senha" placeholder="senha"></p>
 				<br>
 				<div class="row">
 					<div class="col-md-12">		
 							<input class="btn btn-success" type="submit" name="botao" 
 								value="cadastrar">
-							<input class="btn btn-info" type="submit" name="botao" 
-								value="buscar">
-							<input class="btn btn-primary" type="submit" name="botao" 
-								value="atualizar">
-							<input class="btn btn-danger" type="submit" name="botao" 
-								value="deletar">
 					</div>
 				</div>
 			</form>
