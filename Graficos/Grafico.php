@@ -1,5 +1,9 @@
-<html>
-  <head>
+<?php
+$Nota=array();
+$Nps=array();
+$Cor=array();
+
+?>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
@@ -7,15 +11,21 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales', 'Expenses'],
-          ['2004',  1000,      400],
-          ['2005',  1170,      460],
-          ['2006',  660,       1120],
-          ['2007',  1030,      540]
+          ['Nota',    'Promotores', 'Detratores'],
+          <?php
+          for($i=0; $i<=3; $i++)
+          {
+          ?>
+          [' <?php echo $Nps[$i] ?>',<?php echo $Nota?>, '<?php echo $Cor[$i] ?>'],
+          <?php
+          }
+          ?>
         ]);
 
         var options = {
-          title: 'Company Performance',
+          title: 'Gráfico NPS',
+          width:600
+          height:400
           curveType: 'function',
           legend: { position: 'bottom' }
         };
@@ -25,41 +35,51 @@
         chart.draw(data, options);
       }
     </script>
-  </head>
+
   <body>
     <div id="curve_chart" style="width: 900px; height: 500px"></div>
   </body>
-</html>
-<html>
+
+
+<!-------------------------------------------------------------------------------------------------------------->
+
+
   <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load("current", {packages:["corechart"]});
+      google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
+
       function drawChart() {
+
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
-          ['Satisfeito',             2],
-          ['Muito Insatisfeito',      2],
-          ['Pouco Insatisfeito',       2],
-          ['Muito Satisfeito',        2],
-          ['Pouco Satisfeito',        2]
+          ['Work',     2],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    2]
         ]);
 
         var options = {
-          title: 'CSAT',
-          pieHole: 0.4,
+          title: 'CSAT'
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
         chart.draw(data, options);
       }
     </script>
   </head>
   <body>
-    <div id="donutchart" style="width: 900px; height: 500px;"></div>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
   </body>
 </html>
+
+
+<!-------------------------------------------------------------------------------------------------->
+
+
 <html>
   <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -68,17 +88,18 @@
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Month'); // Implicit domain label col.
-        data.addColumn('number', 'Sales'); // Implicit series 1 data col.
+        data.addColumn('string', 'Month');
+        data.addColumn('number', 'Sales');
         data.addRows([
-          ['April',1000],
-          ['May',  1170],
-          ['June',  660],
-          ['July', 1030]
+          ['April',2],
+          ['May',  2],
+          ['June', 2],
+          ['July', 2],
+          ['April',2]
         ]);
 
         var options = {
-          title: 'CSAT',
+          title: 'CES',
           pieHole: 0.4,
         };
 
@@ -91,6 +112,3 @@
     <div id="donutchart" style="width: 900px; height: 500px;"></div>
   </body>
 </html>
-
-
-
