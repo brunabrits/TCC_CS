@@ -7,9 +7,9 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="home.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/home.css">
       <style>
 
         *{
@@ -139,7 +139,7 @@
 
         .container-footer{
           max-width: 1400px;
-          padding 0 4%;
+          padding: 0 4%;
           margin: auto;
         }
 
@@ -150,7 +150,7 @@
 
         .footer-col{
            width: 25%;
-           padding: 0 15px:
+           padding: 0 15px;
         }
 
         .footer-col h4{
@@ -355,7 +355,7 @@
           <h1>Gráficos inteligentes</h1>
           <div class="content">
             <p>
-            Através das pesquisas são gerados gráficos que apresentam o 
+            Através das pesquisas, são gerados gráficos que apresentam o 
             feedback do seus clientes sobre os serviços e/ou produtos da empresa.
                
             </p>     
@@ -381,9 +381,8 @@
           <h1>Relatórios prontos para minimizar seu tempo</h1>
           <div class="content">
             <p>
-               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-               Consequuntur soluta animi placeat vitae officiis quo neque inventore, 
-               dolorem error quas, 
+               Otimize tempo com nossos relatórios inteligentes 
+               que possuem fácil manuseio e eficácia 
             </p>     
        </div>
     </div>

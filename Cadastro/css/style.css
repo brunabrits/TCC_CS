@@ -9,7 +9,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding-top: 3%; /*40px*/
+    padding-top: 40px; /*3%*/
     width:20% ;
     height:55% ;
     border-radius: 20px;
