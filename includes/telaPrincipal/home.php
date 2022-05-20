@@ -121,9 +121,8 @@
 
         }
 
-        a{
-          
-        }
+        a { color: inherit; } 
+        
 
         .midias-sociais{
           position: relative;
@@ -300,7 +299,7 @@
 
         <div class="ladinho">
           <button type="button" class="btn btn-outline-light  mr-3 "><a href="../TCC_CS/includes/telaLogin/entrar.php" style="text-decoration:none" >Login</a></button> 
-          <button type="button" class="btn btn-outline-light" ><a href="../TCC_CS/Cadastro/telaCadastro.php" style="text-decoration:none">Cadastre-se</a></button>
+          <button type="button" class="btn btn-outline-light" ><a href="../TCC_CS/Cadastro/telaCadastro.php" style="text-decoration:none" >Cadastre-se</a></button>
         </div><!--fim ladinho-->
       </div><!--fim collapse navbar-collapse-->
     </nav><!--fim nav-->

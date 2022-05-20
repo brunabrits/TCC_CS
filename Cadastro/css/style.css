@@ -1,0 +1,9 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(100deg, rgb(120, 32, 164 ), rgb(75,0,130));
+    /*background-color: rgb(147, 71, 255);*/
+}
+
+.col-md-12{
+    
+}
