@@ -1,16 +1,16 @@
 <?php
 
-	class Conexao
-	{
-		private static $instancia;
+$Bco = 'TCC_CS';
+$Usuario = 'root';
+$Senha = '';
 
-		public static function getConexao()
-		{
-			if(!isset(self::$instancia)){
-				self::$instancia = new PDO('mysql:host=localhost; dbname=TCC_CS; charset=utf8', 'root', '');
-				return self::$instancia;
-			}else{
-				return self::$instancia;
-			}	
-		}
-	}
+try {
+	$conexao = new PDO("mysql:host=localhost; dbname=$Bco", "$Usuario", "$Senha");
+	$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$conexao->exec("set names utf8");
+} 
+catch (PDOException $erro) 
+{
+	echo "Erro na Conexão" . $erro->getMessage();
+	exit();
+}

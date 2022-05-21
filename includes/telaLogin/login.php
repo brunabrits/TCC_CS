@@ -1,27 +1,32 @@
 <?php
 session_start();
 
-include('conexao.php');
+include "../../Database/conexao.php";
 
-if(empty($_POST['email'] || empty($_POST['senha']))) {
-    header('Location: entrar.html');
-    exit();
+$email = $_POST['email'];
+$senha = $_POST['senha'];
+
+$Matriz = $conexao->prepare("SELECT * FROM Cliente WHERE email = ? AND senha = ?");
+$Matriz->bindParam(1, $email);
+$Matriz->bindParam(2, md5($senha));
+
+$Matriz->execute();
+
+$Linha = $Matriz->fetch(PDO::FETCH_OBJ);
+
+if($Linha > 0)
+{
+    $_SESSION['Usuario'] = $email;
+    $_SESSION['Chave']   = $senha;
+
+    header('location:painelTeste.php');
 }
-
-$email  = mysqli_real_escape_string($instancia, $_POST['email']);
-$senha  = mysqli_real_escape_string($instancia, $_POST['senha']);
-
-$query  = "select id_cliente, email from Clientes where email ='{$email}' and senha =md5('{$senha}')";
-
-$result = mysqli_query($instancia, $query);
-
-$row    = mysqli_num_rows($result);
-
-if($row == 1) {
-    $_SESSION['email'] = $email;
-    header('Location: painel.php');
-} else{
+else
+{
     $_SESSION['nao_autenticado'] = true;
-    header('Location: entrar.php');
-}
+    
+    unset($_SESSION['Usuario']);
+    unset($_SESSION['Chave']);
 
+    header('location:entrar.php');
+}

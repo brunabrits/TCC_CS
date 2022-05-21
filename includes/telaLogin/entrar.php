@@ -15,6 +15,7 @@ session_start()
 </head>
 
 <body>
+    
     <center>
         <img class="logo" src="img/logo.png" alt="">
     </center>
@@ -43,6 +44,8 @@ session_start()
                 endif;
 
                 unset($_SESSION['nao_autenticado']);
+                unset($_SESSION['Usuario']);
+                unset($_SESSION['Chave']);
                 ?>
 
             </div><!--fim login-->
