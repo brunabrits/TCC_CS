@@ -319,9 +319,9 @@
             <div class="dropdown-menu"  aria-labelledby="navbarDropdownMenuLink">
               <h6 class="dropdown-header">Tipos de pesquisa</h6>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Pesquisa NPS</a>
-              <a class="dropdown-item" href="#">Pesquisa CES</a>
-              <a class="dropdown-item" href="#">Pesquisa CSAT</a>  
+              <a class="dropdown-item" href="../../TCC_CS/Pesquisas/NPS/PesquisaNps.html">Pesquisa NPS</a>
+              <a class="dropdown-item" href="../../TCC_CS/Pesquisas/CES/PesquisaCes.html">Pesquisa CES</a>
+              <a class="dropdown-item" href="../../TCC_CS/Pesquisas/CSAT/PesquisaCsat.html">Pesquisa CSAT</a>  
             </div>
           </li>
         </ul>

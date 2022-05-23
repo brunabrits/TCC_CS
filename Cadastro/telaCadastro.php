@@ -12,7 +12,7 @@
 <body>
 <header></header>
     <nav class="navbar navbar-expand-lg navbar-dark" id="nav" style=" background-color: rgb(75,0,130)">
-      <a class="navbar-brand" href="#">Nome</a>
+      <a class="navbar-brand" href="">Nome</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -20,7 +20,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item ">
-            <a class="nav-link" href="#">Plataforma</a>
+            <a class="nav-link" href="../../TCC_CS/index.php">Plataforma</a>
           </li>
 
         </ul>
@@ -35,9 +35,9 @@
 		<div class="col-md-12">
 			<form action="controle.php" method="GET">
 				
-				<p><input type="text" class="form-control" name="nome" placeholder="nome"></p>
-				<p><input type="text" class="form-control" name="email" placeholder="email"></p>
-				<p><input type="password" class="form-control" name="senha" placeholder="senha"></p>
+				<p><input type="text" class="form-control" name="nome" placeholder="Nome Completo"></p>
+				<p><input type="text" class="form-control" name="email" placeholder="exemplo@email.com"></p>
+				<p><input type="password" class="form-control" name="senha" placeholder="Senha"></p>
 				<br>
 				<div class="row">
 					<div class="col-md-12">		
