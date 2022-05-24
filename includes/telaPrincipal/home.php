@@ -130,6 +130,15 @@
           height: 30px;
         } 
 
+        .titulo{
+          text-align: center;
+        }
+
+        .fundo{
+          background-color: rgb(225,214,246);
+          height: 55vw; 
+        }
+
        /*fotter*/
 
         footer{
@@ -285,6 +294,10 @@
         }
 
         /*fim footer*/
+
+        .imgtest{
+          width: 30vw;
+        }
         
 
 
@@ -333,7 +346,7 @@
       </div><!--fim collapse navbar-collapse-->
     </nav><!--fim nav-->
     
-    <section>
+    <section class="fundo">
     <div class="texto">
       <h2>Layout Container</h2><br><br>
       <p>The w3-cell-row class stretches the elements</p>
@@ -342,11 +355,12 @@
     <div class="test">  
       <img src="includes/telaPrincipal/homeimg.webp">
     </div>
-    </section>
+    </section><br><br><br><br>
+
+    <h1 class="titulo">Aproveite o melhor da plataforma!</h1>
 
 
   <section class="balao"> 
-    
     <div class="container">
         <div class="card">
             <div class="img">
@@ -388,6 +402,9 @@
     </div>
   </div>
   </section>
+
+<
+<img src="includes/telaPrincipal/img/test.png" class="imgtest" alt="graficos">
 
 
 
