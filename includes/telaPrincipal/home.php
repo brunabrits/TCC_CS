@@ -30,25 +30,29 @@
           margin-right: 5%;
           padding:10px;
           display: inline-block;
-          width: 30%;
-          height: 50%;
+          width: 40%;
+          height: 60%;
           font-size: 1.7vw;
+          
         }
         
         h2{
           font-size: 3vw;
+          margin-bottom: 55px;
         }
       
         img{
-         width:100%;
+         width:90%;
+         
       
         }     
 
         .test{
-          display: inline-block;
+        /*  display: inline-block;
           width: 55%;
-          height: 55%;
-        
+       /*   height: 55%;*/
+        text-align: center;
+        padding-top: 35px;
         }
 
         .container{
@@ -137,6 +141,7 @@
         .fundo{
           background-color: rgb(225,214,246);
           height: 55vw; 
+          display: flex;
         }
 
        /*fotter*/
@@ -291,9 +296,28 @@
           .footer-col{
             width: 100%;
           }
+        
         }
 
         /*fim footer*/
+/* 
+         @media (max-width: 1110px){
+          .fundo{
+            flex-direction: column;
+        }
+/
+           .texto{
+            background-color: red;
+            width: 40%;
+            height: 60%;
+            font-size: 100%;
+            position: absolute;
+        
+
+          } 
+        
+        }   */
+
 
         .imgtest{
           width: 30vw;
@@ -348,8 +372,11 @@
     
     <section class="fundo">
     <div class="texto">
-      <h2>Layout Container</h2><br><br>
-      <p>The w3-cell-row class stretches the elements</p>
+      <h2>Layout Container</h2><!--<br><br>-->
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+         Molestiae temporibus nostrum fuga,
+
+      </p>
     </div>
 
     <div class="test">  
@@ -375,7 +402,7 @@
             </p>     
        </div>
     </div>
-
+ 
     <div class="card">
             <div class="img">
                <img src="https://cdn-icons-png.flaticon.com/512/3126/3126647.png">
@@ -389,11 +416,11 @@
     </div>
 
     <div class="card">
-            <div class="img">
+       <div class="img">
                <img src="includes/telaPrincipal/tempo-rapido.png">
-          </div>
-          <h1>Relatórios prontos para minimizar seu tempo</h1>
-          <div class="content">
+       </div>
+            <h1>Relatórios prontos para minimizar seu tempo</h1>
+       <div class="content">
             <p>
                Otimize tempo com nossos relatórios inteligentes 
                que possuem fácil manuseio e eficácia 
@@ -404,7 +431,7 @@
   </section>
 
 <
-<img src="includes/telaPrincipal/img/test.png" class="imgtest" alt="graficos">
+<!-- <img src="includes/telaPrincipal/img/test.png" class="imgtest" alt="graficos"> -->
 
 
 
