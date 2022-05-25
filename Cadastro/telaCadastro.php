@@ -11,21 +11,7 @@
 </head>
 <body>
 <header></header>
-    <nav class="navbar navbar-expand-lg navbar-dark" id="nav" style=" background-color: rgb(75,0,130)">
-      <a class="navbar-brand" href="">Nome</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item ">
-            <a class="nav-link" href="../../TCC_CS/index.php">Plataforma</a>
-          </li>
-
-        </ul>
-       </div>
-      </div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
     </nav>
 <div class="container">
 	<br>
