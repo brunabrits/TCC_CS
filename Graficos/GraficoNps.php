@@ -1,5 +1,6 @@
 <?php
 
+$sql=("");
 $Nota=array($porcentagem);
 $Nps=array($calnps);
 $Cor=array("red","yellow","green");
