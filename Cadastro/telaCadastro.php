@@ -35,9 +35,9 @@
 		<div class="col-md-12">
 			<form action="controle.php" method="GET">
 				
-				<p><input type="text" class="form-control" name="nome" placeholder="Nome Completo"></p>
-				<p><input type="text" class="form-control" name="email" placeholder="exemplo@email.com"></p>
-				<p><input type="password" class="form-control" name="senha" placeholder="Senha"></p>
+				<p><input type="text" class="form-control" name="nome" placeholder="Nome Completo" required></p>
+				<p><input type="email" class="form-control" name="email" placeholder="exemplo@email.com" required></p>
+				<p><input type="password" class="form-control" name="senha" placeholder="Senha" required></p>
 				<br>
 				<div class="row">
 					<div class="col-md-12">		
