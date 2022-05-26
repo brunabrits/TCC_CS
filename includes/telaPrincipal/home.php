@@ -139,7 +139,7 @@
         }
 
         .fundo{
-          background-color: rgb(225,214,246);
+          background-color: white;
           height: 55vw; 
           display: flex;
         }
@@ -300,28 +300,30 @@
         }
 
         /*fim footer*/
-/* 
+ 
          @media (max-width: 1110px){
           .fundo{
-            flex-direction: column;
+            flex-direction: column;  
+            height: 120vw; 
+            
         }
-/
-           .texto{
-            background-color: red;
-            width: 40%;
-            height: 60%;
-            font-size: 100%;
-            position: absolute;
-        
 
-          } 
+           .texto{    
+             width: 80%;
+             padding-left: 40px;
+             font-size: 2.8vw;
+             text-align: center;
         
-        }   */
+        }
 
+        .texto h2{
+          font-size: 6vw;
+        }
 
         .imgtest{
           width: 30vw;
         }
+          }
         
 
 
@@ -374,7 +376,9 @@
     <div class="texto">
       <h2>Layout Container</h2><!--<br><br>-->
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+         Molestiae temporibus nostrum fuga,Lorem ipsum dolor sit, amet consectetur adipisicing elit.
          Molestiae temporibus nostrum fuga,
+
 
       </p>
     </div>
