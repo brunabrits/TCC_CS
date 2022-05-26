@@ -140,7 +140,7 @@
 
         .fundo{
           background-color: white;
-          height: 55vw; 
+          height: 48vw; 
           display: flex;
         }
 
