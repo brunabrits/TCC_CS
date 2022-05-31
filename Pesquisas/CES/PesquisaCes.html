@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/CES.css"/>
+
     
     <title>Pesquisa</title>
 </head>
 <body>
+    <div class="pesquisa">
     <header>Pesquisa CES</header>
 <br>
-    <form action="Controleces.php" method="get">
+    <form action="Controleces.php" method="get" class="form">
     <label for="">Qual seu nome?</label> <br>
     <input type="text" name="nomeces" required><br>
 
@@ -29,7 +32,8 @@
     <input type="radio" name="ces" value="5">5
     <br>
     <hr>
-    <input type="submit" name="botao" value="Enviar">
-    </form>  
+    <input type="submit" class="button" name="botao" value="Enviar">
+    </form> 
+    </div> 
 </body>
 </html>
