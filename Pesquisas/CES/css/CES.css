@@ -1,24 +1,44 @@
 *{
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
 
+body{
+    background-color: #E9E1EC;
+}
+h1{
+    background-color: #883FE5;
+    height: 60px;
+    color: white;
+    border-radius: 20px;
+    margin-top: 0;
+
+   
 }
 
 .pesquisa{
-    background-color: #D4A1E7;
+    background-color: white;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding-top: 40px; 
-    width:850px ;
-    height:400px ;
+    width:50% ;
+    height:70% ;
     border-radius: 20px;
     color: white;
-    margin-top: 6%;
+    /*margin-top: 6%;*/
     justify-content: center ;
     align-items: center;
     text-align: center;
+}
+.form{
+    width: 90%;
+    height: 100%;
+    margin:auto;
+    margin-top: 30px;
+    justify-content: center ;
+    text-align: center;
+    align-items: center;
 }
 
 .button{
@@ -26,7 +46,8 @@
     border: none;
     color: white;
     padding: 15px;
-    width: 100%;
+    width: 30%;
+    height: 10%;
     border-radius: 20px;
     font-size: 17px;
     cursor: pointer;
@@ -37,11 +58,29 @@
     transition: 1.2s;
     justify-content: space-between;
 }
-
-.form{
-    width: 80%;
-    margin-top: 20px;
-    justify-content: center ;
-    text-align: center;
-    align-items: center;
+label{
+    font-size: 17.4px;
+    
 }
+input{
+    border-radius: 20px;
+    height: 6%;
+    width: 40%;
+    padding-left: 5px;
+    text-align: center;
+}
+.ball{
+    height: 6%;
+    width: 5%;
+   
+}
+/*input[type=""]:checked{
+    background-color: #883FE5;
+}
+
+@media (max-width: 1110px){
+    .fundo{
+      flex-direction: column;  
+      height: 120vw; 
+      
+  }*/
