@@ -17,10 +17,11 @@
 
          }
 
-        @media (min-width: 768px){
+         @media (min-width: 768px){
           .ladinho{
-            margin-left:65% !important;
+            margin-left:auto;
             position: relative;
+            display: flex;
           }
         }
 
@@ -364,7 +365,7 @@
             </div>
           </li>
         </ul>
-
+       
         <div class="ladinho">
           <button type="button" class="btn btn-outline-light  mr-3 "><a href="../TCC_CS/includes/telaLogin/entrar.php" style="text-decoration:none" >Login</a></button> 
           <button type="button" class="btn btn-outline-light" ><a href="../TCC_CS/Cadastro/telaCadastro.php" style="text-decoration:none" >Cadastre-se</a></button>
