@@ -76,11 +76,26 @@ input{
 }
 /*input[type=""]:checked{
     background-color: #883FE5;
-}
+}*/
 
-@media (max-width: 1110px){
-    .fundo{
-      flex-direction: column;  
-      height: 120vw; 
-      
-  }*/
+@media (max-width: 768px){
+    .pesquisa{
+    height: 80%;
+    width: 80%;
+    margin: auto;
+    position: absolute;
+  }
+  .form{
+    height: 80%;
+    width: 80%;
+    margin: auto;
+  }
+  .button{
+
+  }
+}
+@media (max-width: 500px){
+    .pesquisa{
+        /*height: 100%;*/
+    }
+}
