@@ -74,13 +74,10 @@ input{
     width: 5%;
    
 }
-/*input[type=""]:checked{
-    background-color: #883FE5;
-}*/
 
 @media (max-width: 768px){
     .pesquisa{
-    height: 80%;
+    height: 70%;
     width: 80%;
     margin: auto;
     position: absolute;
@@ -90,12 +87,45 @@ input{
     width: 80%;
     margin: auto;
   }
-  .button{
+}
+.button{
+    padding: 10px;
+    width: 40%;
+    height: 10%;
+}
 
-  }
+input{
+    height: 6%;
+    width: 45%;
+    padding-left: 5px;
 }
-@media (max-width: 500px){
-    .pesquisa{
-        /*height: 100%;*/
+
+.escala{
+    display: inline-flex;
+}
+.escala2{
+    margin-left: 15%;
+    display: inline-flex;
+}
+
+/*@media (min-width: 320px) {
+    .form{
+        margin: 0%;
+        height: auto;
+        width: auto;
     }
-}
+    .escala2{
+        margin-left: 5%;
+        display: inline-flex;
+    }
+    .escala{
+        display: inline-flex;
+    }
+    
+    input{
+        height: 6%;
+        width: 60%;
+        padding-left: 5px;
+        text-align: center;
+    }
+} (tentativa de alteração formato mobile)*/
