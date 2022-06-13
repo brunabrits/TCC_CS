@@ -6,7 +6,7 @@ include "../../Database/conexao.php";
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
-$Matriz = $conexao->prepare("SELECT * FROM Cliente WHERE email = ? AND senha = ?");
+$Matriz = $conexao->prepare("SELECT * FROM Cliente WHERE Email_cliente = ? AND Senha_cliente = ?");
 $Matriz->bindParam(1, $email);
 $Matriz->bindParam(2, md5($senha));
 
