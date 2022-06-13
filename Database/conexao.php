@@ -1,6 +1,6 @@
 <?php
 
-$Bco = 'TCC_CS';
+$Bco = 'Tcc_cs';
 $Usuario = 'root';
 $Senha = '';
 
