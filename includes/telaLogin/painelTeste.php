@@ -10,14 +10,14 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <title>Painel</title>
     <style>
-
-        *{
+*{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             text-decoration: none;
             font-family: Arial, Helvetica, sans-serif;
         }
+
 
         header{
             width: 100%;
@@ -46,12 +46,93 @@
             position: absolute;
         }
 
-        .menu_side {
+        .menu_side{
             width: 80px;
             height: 100%;
-            background: red;
+            background:  rgb(75,0,130);
+            position: fixed;
+            top: 0;
+            left: 0;
+            color: white;
+            font-size: 18px;
+            z-index: 300;
+            overflow: hidden;
+            overflow-y: scroll;
+            border-right: 20px solid rgb(75,0,130);
         }
 
+
+        body{
+             margin-left: 80px;
+
+        }
+
+        .name_page{
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            
+        }
+
+        .name_page span{
+            margin-right: 20px;
+            width: 20px;
+        }
+
+        .options_menu{
+            padding: 20px 30px; 
+            position: absolute;
+            top: 80px;
+        }
+
+        .options_menu a{
+            color: #ffffffb2;
+            cursor: default;
+            display: block;
+            position: relative;
+            transition: color 300ms;
+        }
+
+        .options_menu a:hover{
+            color: white;
+        }
+
+        .options_menu .option{
+            padding: 20px 0px;
+            display: flex ;
+            align-items: center;
+            position: relative;
+        }
+
+        .options_menu .option span{
+            margin-right: 20px;
+            width: 20px;
+            cursor: pointer;
+
+        } 
+
+        .options_menu .option h4{
+            font-weight: 300;
+            cursor: pointer;
+        }
+
+        a.selected{
+            color: #fff;
+        }
+
+        .selected:before{
+            content: '';
+            width: 3px;
+            height: 80%;
+            background-color: white;
+            position: absolute;
+            top: 10%;
+            left: -30px;
+
+        }
+
+       
     </style>
 </head>
 <body>
@@ -84,18 +165,18 @@
 
           <div class="options_menu">
 
-              <a href="#">
+              <!-- <a href="#">
                   <div class="option">
                       <span><ion-icon name="home-outline"></ion-icon></span>
                       <span class="title">Início</span>
                   </div>
-              </a>
+              </a> -->
 
               <a href="#">
                   <div class="option">
                       <!-- <i class="fas fa-home" title="graficos">Gráficos</i> -->
                        <span><ion-icon name="cellular-outline"></ion-icon></span>
-                       <span class="title">Clientes</span>
+                       <span class="title">Gráficos</span>
                   </div>
               </a>
 
@@ -107,19 +188,19 @@
                   </div>
               </a>
 
-              <a href="#">
+              <!-- <a href="#">
                   <div class="option">
                        <span><ion-icon name="reader-outline"></ion-icon></span>
                        <span class="title">Relatórios</span>
                   </div>
-              </a>
+              </a> -->
 
-              <a href="#">
+              <!-- <a href="#">
                   <div class="option">
                        <span><ion-icon name="exit-outline"></ion-icon><span>
-                       <span class="title">Sair</span>
+                       <span class="title">sair</span>
                   </div>
-              </a>
+              </a> -->
           </div>
     </div>
 
