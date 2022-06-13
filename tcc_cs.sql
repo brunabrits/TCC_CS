@@ -1,265 +1,82 @@
--- phpMyAdmin SQL Dump
--- version 4.7.2
--- https://www.phpmyadmin.net/
---
--- Host: localhost
--- Generation Time: 24-Nov-2021 às 19:27
--- Versão do servidor: 5.7.20
--- PHP Version: 7.1.11
+create database Tcc_cs;
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
+use Tcc_cs;
+
+create table Cliente(
+	Id_cliente 		int primary key auto_increment,
+    Nm_cliente 		varchar(70) not null,
+    Email_cliente 	varchar(50) not null,
+    Senha_cliente 	varchar(32) not null
+);
+
+create table Pesquisas(
+	Id_pesquisa 	int primary key auto_increment,
+    Tp_pesquisa 	varchar(45) not null
+);
+
+create table Nps(
+	Id_nps 					int primary key auto_increment,
+    Tp_nps_promotor 		int(2)  null,
+    Tp_nps_neutro 			int(1)  null,
+    Tp_nps_detrator 		int(1)  null
+);
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+create table Csat(
+	Id_csat 		int primary key auto_increment,
+    Tp_csat_mts		int(1)  null,
+	Tp_csat_s 		int(1)  null,
+    Tp_csat_n 		int(1)  null,
+    Tp_csat_i 		int(1)  null,
+    Tp_csat_mti		int(1)  null
+);
 
---
--- Database: `tcc_cs`
---
+create table Ces(
+	Id_ces 		int primary key auto_increment,
+    Tp_ces_mf 	int(1)  null,
+    Tp_ces_f 	int(1)  null,
+    Tp_ces_n 	int(1)  null,
+    Tp_ces_d 	int(1)  null,
+    Tp_ces_md 	int(1)  null
+);
 
--- --------------------------------------------------------
+create table Metricas(
+	Id_metricas 	int primary key auto_increment,
+    Nm_metricas 	varchar(10) not null,
+    fk_Id_nps 		int null,
+    fk_Id_csat 		int null,
+    fk_Id_ces		int null,
+	foreign key 	(fk_Id_nps) 	references 	Nps (Id_nps),
+    foreign key 	(fk_Id_csat) 	references 	Csat (Id_csat),
+    foreign key 	(fk_Id_ces) 	references 	Ces (Id_ces)
+);
 
---
--- Estrutura da tabela `clientes`
---
+create table Perguntas(
+	Id_pergunta			int not null primary key,
+    Nm_pergunta 		varchar(100) not null,
+    Ds_pergunta 		varchar(100) not null,
+    fk_Id_metricas 		int not null,
+    fk_Id_pesquisas 	int not null,
+    foreign key 		(fk_Id_metricas)	references 	Metricas  (Id_metricas),
+    foreign key 		(fk_Id_pesquisas)	references 	Pesquisas (Id_pesquisa)
+);
 
-CREATE TABLE `clientes` (
-  `cod_clientes` int(11) NOT NULL,
-  `nome` varchar(90) NOT NULL,
-  `idade` char(3) NOT NULL,
-  `renda_familiar` decimal(9,2) DEFAULT NULL,
-  `cliente_contato` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+create table Respostas(
+	Id_resposta 		int not null primary key,
+    Vlr_resposta 		int not null,
+    Email_resposta 		varchar(50) not null,
+	fk_Id_pergunta 		int not null,
+    foreign key 		(fk_Id_pergunta) references Perguntas (Id_pergunta)
+);    
 
--- --------------------------------------------------------
+show tables;
 
---
--- Estrutura da tabela `contatos`
---
+desc Cliente;
+desc Pesquisas;
+desc Nps;
+desc Csat;
+desc Ces;
+desc Metricas;
+desc Perguntas;
+desc Respostas;
 
-CREATE TABLE `contatos` (
-  `codD` int(11) NOT NULL,
-  `telefone` char(15) NOT NULL,
-  `email` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `dados_pesquisa`
---
-
-CREATE TABLE `dados_pesquisa` (
-  `cod_dados` int(11) NOT NULL,
-  `dados_pesquisa` varchar(255) NOT NULL,
-  `numero_pesquisa` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `empresas`
---
-
-CREATE TABLE `empresas` (
-  `cnpj` int(11) NOT NULL,
-  `Nome_Fantasia` varchar(90) DEFAULT NULL,
-  `empresa_contato` int(11) NOT NULL,
-  `empresa_endereco` int(11) NOT NULL,
-  `empresa_produto` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `endereco`
---
-
-CREATE TABLE `endereco` (
-  `Cod_Endereco` int(11) NOT NULL,
-  `cep` char(8) NOT NULL,
-  `bairro` varchar(50) DEFAULT NULL,
-  `numero_residencia` char(10) DEFAULT NULL,
-  `cidade` varchar(50) NOT NULL,
-  `estado` varchar(50) NOT NULL,
-  `pais` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `funcionarios`
---
-
-CREATE TABLE `funcionarios` (
-  `cpf` char(11) NOT NULL,
-  `rg` char(15) DEFAULT NULL,
-  `nome` varchar(50) NOT NULL,
-  `funcionarios_contato` int(11) NOT NULL,
-  `funcionarios_endereco` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `pesquisa`
---
-
-CREATE TABLE `pesquisa` (
-  `cod_pesquisa` int(11) NOT NULL,
-  `metrica` varchar(45) NOT NULL,
-  `publico_alvo` varchar(90) NOT NULL,
-  `pesquisa_produto` int(11) NOT NULL,
-  `pesquisa_cliente` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `produto`
---
-
-CREATE TABLE `produto` (
-  `cod_produto` int(11) NOT NULL,
-  `tipo` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `relatorios`
---
-
-CREATE TABLE `relatorios` (
-  `cod_relatorios` int(11) NOT NULL,
-  `relatorios` varchar(255) NOT NULL,
-  `numero_relatorio` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `clientes`
---
-ALTER TABLE `clientes`
-  ADD PRIMARY KEY (`cod_clientes`),
-  ADD KEY `cliente_contato` (`cliente_contato`);
-
---
--- Indexes for table `contatos`
---
-ALTER TABLE `contatos`
-  ADD PRIMARY KEY (`codD`);
-
---
--- Indexes for table `dados_pesquisa`
---
-ALTER TABLE `dados_pesquisa`
-  ADD PRIMARY KEY (`cod_dados`),
-  ADD KEY `numero_pesquisa` (`numero_pesquisa`);
-
---
--- Indexes for table `empresas`
---
-ALTER TABLE `empresas`
-  ADD PRIMARY KEY (`cnpj`),
-  ADD KEY `empresa_contato` (`empresa_contato`),
-  ADD KEY `empresa_endereco` (`empresa_endereco`),
-  ADD KEY `empresa_produto` (`empresa_produto`);
-
---
--- Indexes for table `endereco`
---
-ALTER TABLE `endereco`
-  ADD PRIMARY KEY (`Cod_Endereco`);
-
---
--- Indexes for table `funcionarios`
---
-ALTER TABLE `funcionarios`
-  ADD PRIMARY KEY (`cpf`),
-  ADD KEY `funcionarios_contato` (`funcionarios_contato`),
-  ADD KEY `funcionarios_endereco` (`funcionarios_endereco`);
-
---
--- Indexes for table `pesquisa`
---
-ALTER TABLE `pesquisa`
-  ADD PRIMARY KEY (`cod_pesquisa`),
-  ADD KEY `pesquisa_produto` (`pesquisa_produto`),
-  ADD KEY `pesquisa_cliente` (`pesquisa_cliente`);
-
---
--- Indexes for table `produto`
---
-ALTER TABLE `produto`
-  ADD PRIMARY KEY (`cod_produto`);
-
---
--- Indexes for table `relatorios`
---
-ALTER TABLE `relatorios`
-  ADD PRIMARY KEY (`cod_relatorios`),
-  ADD KEY `numero_relatorio` (`numero_relatorio`);
-
---
--- Constraints for dumped tables
---
-
---
--- Limitadores para a tabela `clientes`
---
-ALTER TABLE `clientes`
-  ADD CONSTRAINT `clientes_ibfk_1` FOREIGN KEY (`cliente_contato`) REFERENCES `contatos` (`codD`);
-
---
--- Limitadores para a tabela `contatos`
---
-ALTER TABLE `contatos`
-  ADD CONSTRAINT `contatos_ibfk_1` FOREIGN KEY (`codD`) REFERENCES `empresas` (`cnpj`);
-
---
--- Limitadores para a tabela `dados_pesquisa`
---
-ALTER TABLE `dados_pesquisa`
-  ADD CONSTRAINT `dados_pesquisa_ibfk_1` FOREIGN KEY (`numero_pesquisa`) REFERENCES `pesquisa` (`cod_pesquisa`);
-
---
--- Limitadores para a tabela `empresas`
---
-ALTER TABLE `empresas`
-  ADD CONSTRAINT `empresas_ibfk_1` FOREIGN KEY (`empresa_contato`) REFERENCES `contatos` (`codD`),
-  ADD CONSTRAINT `empresas_ibfk_2` FOREIGN KEY (`empresa_endereco`) REFERENCES `endereco` (`Cod_Endereco`),
-  ADD CONSTRAINT `empresas_ibfk_3` FOREIGN KEY (`empresa_produto`) REFERENCES `produto` (`cod_produto`);
-
---
--- Limitadores para a tabela `funcionarios`
---
-ALTER TABLE `funcionarios`
-  ADD CONSTRAINT `funcionarios_ibfk_1` FOREIGN KEY (`funcionarios_contato`) REFERENCES `contatos` (`codD`),
-  ADD CONSTRAINT `funcionarios_ibfk_2` FOREIGN KEY (`funcionarios_endereco`) REFERENCES `endereco` (`Cod_Endereco`);
-
---
--- Limitadores para a tabela `pesquisa`
---
-ALTER TABLE `pesquisa`
-  ADD CONSTRAINT `pesquisa_ibfk_1` FOREIGN KEY (`pesquisa_produto`) REFERENCES `produto` (`cod_produto`),
-  ADD CONSTRAINT `pesquisa_ibfk_2` FOREIGN KEY (`pesquisa_cliente`) REFERENCES `clientes` (`cod_clientes`);
-
---
--- Limitadores para a tabela `relatorios`
---
-ALTER TABLE `relatorios`
-  ADD CONSTRAINT `relatorios_ibfk_1` FOREIGN KEY (`numero_relatorio`) REFERENCES `dados_pesquisa` (`cod_dados`);
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
