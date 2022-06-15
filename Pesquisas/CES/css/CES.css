@@ -32,7 +32,7 @@ h1{
     text-align: center;
 }
 .form{
-    width: 90%;
+    width: 100%; /*90%*/
     height: 100%;
     margin:auto;
     margin-top: 2%;
@@ -59,21 +59,31 @@ h1{
     transition: 1.2s;
     justify-content: space-between;
 }
-label{
+.ask{
     font-size: 17.4px;
+    margin-bottom:10px ;
     
 }
 input{
     border-radius: 20px;
-    height: 6%;
-    width: 40%;
+    height: 25px;
+    width: 35%;
     padding-left: 5px;
     text-align: center;
 }
 .ball{
-    height: 6%;
+    height: 15px;
     width: 5%;
    
+}
+.escala{
+    display: inline-flex;
+    font-size: 17.4px;
+}
+.escala2{
+    margin-left: 15%;
+    display: inline-flex;
+    font-size: 17.4px;
 }
 
 @media (max-width: 768px){
@@ -88,7 +98,7 @@ input{
     width: 80%;
     margin: auto;
   }
-}
+
 .button{
     padding: 10px;
     width: 40%;
@@ -108,7 +118,7 @@ input{
     margin-left: 15%;
     display: inline-flex;
 }
-
+}
 @media (max-width: 400px) {
     .pesquisa{
         height: auto;
@@ -134,9 +144,6 @@ input{
         text-align: center;
     }
     
-    body{
-        background-color: blue;
-    }
 }
 
 /*escalinha*/
