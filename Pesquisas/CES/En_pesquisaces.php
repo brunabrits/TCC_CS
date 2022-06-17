@@ -6,21 +6,59 @@ class En_pesquisa
 {
 	public function incluir(ValCes $s){
 		
-		$sql = "insert into ces values (?, ?, ?, ?)";
+		$sql = "INSERT INTO Respostas(Vlr_resposta, Email_resposta,Dt_nasc) VALUES (?,?,?)";
 		$bd = new Conexao();
 		$con = $bd->getConexao();
 		$stm = $con->prepare($sql);
-		$stm->bindValue(1, $s->getNomeces());
-		$stm->bindValue(2, $s->getDtces());
-		$stm->bindValue(3, $s->getEmaices());
-		$stm->bindValue(4, $s->getCes());
+		$stm->bindValue(1, $s->getCes());
+		$stm->bindValue(2, $s->getEmaices());
+		$stm->bindValue(3, $s->getDtces());
+	  //$stm->bindValue(1, $s->getNomeces());
 		$resultado = $stm->execute();
 
-		if($resultado){
-			echo "Pesquisa Enviada";
-		}else{
-			echo "Não foi possível concluir";
+		$ces =$_GET['ces'];
+
+		if ($ces ==1)
+		{	//Muito Dificil 
+			$sql_md = "INSERT INTO Ces(Tp_ces_md) VALUES (1)";
+			$vlr = $con->prepare($sql_md);
 		}
+		else if($ces ==2)
+		{	//Dificil
+			$sql_d = "INSERT INTO Ces(Tp_ces_d) VALUES (1)";
+			$vlr = $con->prepare($sql_d);
+		}
+		else if ($ces ==3)
+		{	//Neutro
+			$sql_n = "INSERT INTO Ces(Tp_ces_n) VALUES (1)";
+			$vlr = $con->prepare($sql_n);
+		}
+		else if ($ces ==4)
+		{	//Facil
+			$sql_f = "INSERT INTO Ces(Tp_ces_f) VALUES (1)";
+			$vlr = $con->prepare($sql_f);
+		}
+		else if ($ces ==5)
+		{	//Muito Facil
+			$sql_mf = "INSERT INTO Ces(Tp_ces_mf) VALUES (1)";
+			$vlr = $con->prepare($sql_mf);
+		}
+		else
+		{
+			echo("ERRO");
+		}
+
+		$vlr_resultado = $vlr->execute();
+
+
+		if($resultado){
+			?>
+			   <script> alert('Sua resposta foi enviada com Sucesso!')
+			   javascript:window.location='PesquisaCes.php'
+			   </script>
+			   <?php }else{
+				   echo "Não foi possível concluir";
+			  }
 	}
 }
 ?>
