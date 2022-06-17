@@ -1,5 +1,5 @@
 <?php 
-include '../Database/conexao.php';
+include '../Conexaopesquisas.php';
 
 class En_pesquisa
 {
