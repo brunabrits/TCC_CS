@@ -62,7 +62,7 @@ create table Perguntas(
 );
 
 create table Respostas(
-	Id_resposta 		int not null primary key,
+	Id_resposta 		int not null primary key auto_increment,
     Vlr_resposta 		int not null,
     Email_resposta 		varchar(50) not null,
     Dt_nasc             Date not null,
