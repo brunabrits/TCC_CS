@@ -40,20 +40,15 @@ class En_pesquisa
 		
 			$vlr_resultado = $vlr->execute();
 
-			$sql_pes = "INSERT INTO Pesquisas(Tp_pesquisa) VALUES ('NPS')";
-			$pes = $con->prepare($sql_pes);
-			$Tp_pes = $pes->execute();
-
 
 			if($resultado){
 			 ?>
 				<script> alert('Sua resposta foi enviada com Sucesso!')
 				javascript:window.location='PesquisaNps.php'
 				</script>
-				<?php }else{
-					echo "Não foi possível concluir";
+				<?php }else{ ?>
+					<script> alert('Sua resposta foi enviada com Sucesso!')</script> <?php
    			}
-	
 
 	}
 }

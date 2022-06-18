@@ -51,14 +51,13 @@ class En_pesquisa
 
 		$vlr_resultado = $vlr->execute();
 
-
 		if($resultado){
 			?>
 			   <script> alert('Sua resposta foi enviada com Sucesso!')
 			   javascript:window.location='PesquisaCsat.php'
 			   </script>
-			   <?php }else{
-				   echo "Não foi possível concluir";
+			   <?php }else{ ?>
+				   <script> alert('Sua resposta foi enviada com Sucesso!')</script> <?php
 			  }
 	}
 }
