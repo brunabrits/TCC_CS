@@ -66,7 +66,7 @@ create table Respostas(
     Vlr_resposta 		int not null,
     Email_resposta 		varchar(50) not null,
     Dt_nasc             Date not null,
-	fk_Id_pergunta 		int not null,
+	fk_Id_pergunta 		int,
     foreign key 		(fk_Id_pergunta) references Perguntas (Id_pergunta)
 );    
 
