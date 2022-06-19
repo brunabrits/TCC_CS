@@ -1,10 +1,14 @@
 <?php
 session_start();
 
-include "../../Database/conexao.php";
+include "../../Cadastro/conexao.php";
 
 $email = $_POST['email'];
 $senha = $_POST['senha'];
+
+$conexao = new PDO('mysql:host=localhost; dbname=Tcc_cs; charset=utf8', 'root', '');
+$bd      = new Conexao();
+$con     = $bd->getConexao();
 
 $Matriz = $conexao->prepare("SELECT * FROM Cliente WHERE Email_cliente = ? AND Senha_cliente = ?");
 $Matriz->bindParam(1, $email);

@@ -18,6 +18,8 @@ class ClienteDao
 
 		if($resultado){
 			echo "Você se cadastrou";
+
+			header('location: ../includes/telaLogin/entrar.php');
 		}else{
 			echo "Tente novamente";
 		}

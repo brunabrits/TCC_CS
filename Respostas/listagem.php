@@ -38,9 +38,8 @@
 
   <?php
 
-  use \Respostas\Entity\Resposta;
-
-  $respostas = Resposta::getRespostas();
+  include 'class_respostas.php';
+  include 'respostasDao.php';
 
   $resultados = '';
   foreach ($respostas as $resposta) {
