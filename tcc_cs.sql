@@ -5,7 +5,7 @@ use Tcc_cs;
 create table Cliente(
 	Id_cliente 		int primary key auto_increment,
     Nm_cliente 		varchar(70) not null,
-    Email_cliente 	varchar(50) not null,
+    Email_cliente 	varchar(50) unique not null,
     Senha_cliente 	varchar(32) not null
 );
 

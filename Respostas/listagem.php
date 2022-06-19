@@ -41,37 +41,34 @@
   include 'class_respostas.php';
   include 'respostasDao.php';
 
-  $resultados = '';
-  foreach ($respostas as $resposta) {
-    $resultados .= '<tr>
-                        <td>' . $resposta->Id_resposta . '</td>
-                        <td>' . $resposta->Vlr_resposta . '</td>
-                        <td>' . $resposta->Email_resposta . '</td>
-                        <td>' . date('d/m/Y', strtotime($resposta->Dt_nasc)) . '</td>
-                      </tr>';
-  }
-
-  $resultados = strlen($resultados) ? $resultados : '<tr>
-                                                         <td>Nenhuma Resposta Encontrada</td>
-                                                      </tr>';
-  ?>
-
-  <?= $mensagem ?>
-
+  $respostas = new Respostas();
+  $respostasDao = new RespostasDao();
+  
+?>
   <section class="tabela">
 
-    <table class="striped">
+    <table class="striped centered">
       <thead>
         <tr>
           <th>ID</th>
           <th>Resposta</th>
           <th>Email</th>
           <th>Data de Nascimento</th>
+          <th>Tipo da Pesquisa</th>
         </tr>
       </thead>
 
       <tbody>
-        <?= $mensagem ?>
+        <?php foreach($respostasDao->Buscar($respostas) as $resultados) : ?>
+          <tr>
+            <td><?= $resultados['Id_resposta']?></td>
+            <td><?= $resultados['Vlr_resposta']?></td>
+            <td><?= $resultados['Email_resposta']?></td>
+            <td><?= date('d/m/Y', strtotime($resultados['Dt_nasc']))?></td>
+            <td><?= $resultados['fk_Id_pergunta']?></td>
+          </tr>
+        <?php endforeach; ?>
+
       </tbody>
 
     </table>
