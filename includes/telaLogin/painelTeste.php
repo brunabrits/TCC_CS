@@ -61,9 +61,19 @@
             border-right: 20px solid rgb(75,0,130);
         }
 
+        .menu_side::-webkit-scrollbar{
+            display: none;
+        }
+
+        .menu_side{
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
 
         body{
              margin-left: 80px;
+             transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
 
         }
 
@@ -132,10 +142,21 @@
 
         }
 
+        /* Class para usar em JavaScript */
+
+        .body_move{
+            margin-left: 250px;
+
+        }
+
+        .menu_side_move{
+            width: 250px;
+        }
+
        
     </style>
 </head>
-<body>
+<body id="body">
     <!-- <h1>Seja bem vindo ao Sistema</h1> -->
 
     <?php
@@ -153,11 +174,11 @@
 
      <header>
           <div class="icon_menu">
-              <i class="fas fa-bars"></i>
+              <i class="fas fa-bars" id="btn_open"></i>
           </div>
      </header>
 
-          <div class="menu_side">
+          <div class="menu_side" id="menu_side">
               <div class="name_page">
                   <!-- <i class="fab fa-youtube"></i> -->
                   <h4>Nome</h4>
@@ -172,13 +193,6 @@
                   </div>
               </a> -->
 
-              <a href="#">
-                  <div class="option">
-                      <!-- <i class="fas fa-home" title="graficos">Gráficos</i> -->
-                       <span><ion-icon name="cellular-outline"></ion-icon></span>
-                       <span class="title">Gráficos</span>
-                  </div>
-              </a>
 
               <a href="#">
                   <div class="option">
@@ -188,12 +202,19 @@
                   </div>
               </a>
 
-              <!-- <a href="#">
+              <a href="#">
+                  <div class="option">
+                      <!-- <i class="fas fa-home" title="graficos">Gráficos</i> -->
+                       <span><ion-icon name="cellular-outline"></ion-icon></span>
+                       <span class="title">Gráficos</span>
+                  </div>
+              </a>
+               <a href="#">
                   <div class="option">
                        <span><ion-icon name="reader-outline"></ion-icon></span>
-                       <span class="title">Relatórios</span>
+                       <span class="title">Pesquisas</span>
                   </div>
-              </a> -->
+              </a>  
 
               <!-- <a href="#">
                   <div class="option">
@@ -204,6 +225,7 @@
           </div>
     </div>
 
+          <script src="script.js"></script>
           <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
           <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

@@ -36,6 +36,10 @@
           font-size: 1.7vw;
           
         }
+
+        .fundocard{
+           background-color: #ECEAED;
+       }
         
         h2{
           font-size: 3vw;
@@ -389,6 +393,8 @@
     </div>
     </section><br><br><br><br>
 
+    <div class="fundocard"><br><br>
+    
     <h1 class="titulo">Aproveite o melhor da plataforma!</h1>
 
 
@@ -433,9 +439,10 @@
        </div>
     </div>
   </div>
+</div>
   </section>
 
-<
+
 <!-- <img src="includes/telaPrincipal/img/test.png" class="imgtest" alt="graficos"> -->
 
 
@@ -464,11 +471,11 @@
         <div class="row-footer">
          <!--  footer col -->
           <div class="footer-col">
-              <h4>Empresa</h4>
+              <h4>Quem somos?</h4>
               <ul>
-                  <li><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, 
-                    nemo veniam ab eius aut esse ullam repellendus quas accusamus odit est! Culpa,
-                     expedita! Asperiores iure voluptatum magnam dolorum modi! Ex?</p></li>
+                  <li><p>Somos a (nome), uma empresa fundada em 2022 especializada em Customer Success,
+                     com o objetivo de aprimorar a relação das empresas com seus clientes,
+                     através de estratégias,aplicações e métricas desenvolvidas.</p></li>
               </ul>
           </div>
          <!-- end footer col -->

@@ -12,9 +12,9 @@ h1{
     color: white;
     border-radius: 20px;
     margin-top: 0;
-
    
 }
+
 
 .pesquisa{
     background-color: white;
@@ -118,6 +118,7 @@ input{
     margin-left: 15%;
     display: inline-flex;
 }
+
 }
 @media (max-width: 400px) {
     .pesquisa{
