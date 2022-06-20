@@ -496,10 +496,10 @@
               <!-- form sub -->
               
                     <div class="form-sub">
-                       <form>
+                       <form method="post" action="email.php">
                           <input  type="email" placeholder="Digite o seu e-mail" required><br><br>
                   	      <textarea  id="mensagem" name="mensagem" placeholder="Digite sua mensagem" rows="3" cols="40"></textarea><br>
-                          <button class="btn btn-outline-light">Enviar</button>
+                          <button class="btn btn-outline-light type="submit" name="Botao"">Enviar</button>
                        </form>    
                     </div>
                
