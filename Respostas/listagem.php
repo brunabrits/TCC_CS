@@ -59,7 +59,9 @@
       </thead>
 
       <tbody>
-        <?php foreach($respostasDao->Buscar($respostas) as $resultados) : ?>
+        <?php 
+        if(is_array($respostasDao->Buscar($respostas)) || is_object($respostasDao->Buscar($respostas))){
+        foreach($respostasDao->Buscar($respostas) as $resultados) : ?>
           <tr>
             <td><?= $resultados['Id_resposta']?></td>
             <td><?= $resultados['Vlr_resposta']?></td>
@@ -67,7 +69,11 @@
             <td><?= date('d/m/Y', strtotime($resultados['Dt_nasc']))?></td>
             <td><?= $resultados['fk_Id_pergunta']?></td>
           </tr>
-        <?php endforeach; ?>
+        <?php endforeach; 
+        }else{
+          
+        }
+        ?>
 
       </tbody>
 
