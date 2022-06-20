@@ -59,6 +59,9 @@
             overflow: hidden;
             overflow-y: scroll;
             border-right: 20px solid rgb(75,0,130);
+            transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+
         }
 
         .menu_side::-webkit-scrollbar{
@@ -73,7 +76,8 @@
 
         body{
              margin-left: 80px;
-             transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
+             transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+             margin-top: 80px;
 
         }
 
@@ -186,15 +190,8 @@
 
           <div class="options_menu">
 
-              <!-- <a href="#">
-                  <div class="option">
-                      <span><ion-icon name="home-outline"></ion-icon></span>
-                      <span class="title">Início</span>
-                  </div>
-              </a> -->
 
-
-              <a href="#">
+              <a href="#" class="selected">
                   <div class="option">
                       <!-- <i class="fas fa-home" title="Gráficos">Início</i> -->
                         <span><ion-icon name="people-outline"></ion-icon></span>
@@ -209,22 +206,35 @@
                        <span class="title">Gráficos</span>
                   </div>
               </a>
+
                <a href="#">
                   <div class="option">
                        <span><ion-icon name="reader-outline"></ion-icon></span>
                        <span class="title">Pesquisas</span>
                   </div>
-              </a>  
-
-              <!-- <a href="#">
+              </a> 
+              
+              
+              <a href="#">
                   <div class="option">
-                       <span><ion-icon name="exit-outline"></ion-icon><span>
-                       <span class="title">sair</span>
+                      <span><ion-icon name="exit-outline"></ion-icon></span>
+                      <span class="title">Sair</span>
                   </div>
-              </a> -->
+              </a> 
+
+            
           </div>
     </div>
-
+<main>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+         Earum harum nemo rerum et illo repellat perspiciatis ullam nobis numquam,
+         delectus neque error,
+         dolorem beatae tenetur deleniti quibusdam exercitationem quasi molestiae.
+         Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        
+    </p>
+</main>
           <script src="script.js"></script>
           <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
           <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
