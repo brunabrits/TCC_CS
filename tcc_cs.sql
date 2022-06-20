@@ -10,6 +10,11 @@ create table Cliente(
     Senha_cliente 	varchar(32) not null
 );
 
+create table Pesquisa(
+ Id_pesquisa 		int auto_increment,
+Tp_pesquisa 	    varchar(4) null
+);
+
 
 create table Nps(
 	Id_nps 					int primary key auto_increment,
@@ -40,24 +45,23 @@ create table Ces(
 
 
 create table Perguntas(
-	Id_pergunta			int not null primary key,
-    Nm_pergunta 		varchar(100) null,
-	fk_Id_nps 		int null,
-    fk_Id_csat 		int null,
-    fk_Id_ces		int null,
-	foreign key 	(fk_Id_nps) 	references 	Nps (Id_nps),
+Id_pergunta		int not null primary key,
+Vlr_pergunta		int(1) not null, 		
+Nm_pergunta 		varchar(100) null,
+fk_Id_nps 		int null,
+fk_Id_csat 		int null,
+fk_Id_ces		int null,
+    foreign key 	(fk_Id_nps) 	references 	Nps (Id_nps),
     foreign key 	(fk_Id_csat) 	references 	Csat (Id_csat),
     foreign key 	(fk_Id_ces) 	references 	Ces (Id_ces)
 
 );
 
 create table Respostas(
-	Id_resposta 		int not null primary key auto_increment,
+    Id_resposta 		int not null primary key auto_increment,
     Vlr_resposta 		int not null,
     Email_resposta 		varchar(50) not null,
-    Dt_nasc             Date not null,
-    Id_pesquisa 		int null,
-    Tp_pesquisa 	    varchar(45) null
+    Dt_nasc             Date not null
 	
 );    
 
