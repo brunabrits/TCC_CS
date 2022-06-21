@@ -1,6 +1,6 @@
 <?php 
 // Aqui ele envia as respostas para o banco 
-include '../Conexaopesquisas.php';
+include '../../Cadastro/conexao.php';
 
 class En_pesquisa
 {

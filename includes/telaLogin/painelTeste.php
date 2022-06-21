@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -14,150 +15,74 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            text-decoration: none;
+            /* text-decoration: none; */
             font-family: Arial, Helvetica, sans-serif;
         }
 
 
-        header{
-            width: 100%;
-            height: 60px;
-            background: #f5f5f5;
-            display: flex;
-            align-items: center;
-            position:fixed;
-            top: 0;
-            z-index: 200;
 
-        }
 
-        .icon_menu{
-            width: 50px;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transform: translatex(10px)
-        }
-
-        .icon_menu span{
-            font-size: 20px;
-            cursor: pointer;
-            position: absolute;
-        }
-
-        .menu_side{
-            width: 80px;
-            height: 100%;
-            background:  rgb(75,0,130);
+        .sidebar{
             position: fixed;
             top: 0;
             left: 0;
-            color: white;
-            font-size: 18px;
-            z-index: 300;
-            overflow: hidden;
-            overflow-y: scroll;
-            border-right: 20px solid rgb(75,0,130);
-            transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-
+            height: 100%;
+            width: 260px;
+            background:  rgb(75,0,130);
 
         }
 
-        .menu_side::-webkit-scrollbar{
-            display: none;
-        }
-
-        .menu_side{
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-
-        body{
-             margin-left: 80px;
-             transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-             margin-top: 80px;
-
-        }
-
-        .name_page{
-            padding: 20px 30px;
+        .sidebar .logo-details{
+            height: 65px;
+            width: 100%;
             display: flex;
             align-items: center;
-            margin-top: 10px;
+
+        }
+
+        .sidebar .logo-details i{
+            font-size: 30px;
+            color: #fff;
             
+            height: 50px;
+            min-width: 78px;
+            text-align: center;
+            line-height: 50px;
+
         }
 
-        .name_page span{
-            margin-right: 20px;
-            width: 20px;
+        .sidebar .logo-details .logo_name{
+            font-size: 22px;
+            color: #fff;
+            font-weight: 600;
         }
 
-        .options_menu{
-            padding: 20px 30px; 
-            position: absolute;
-            top: 80px;
+        .sidebar .nav-links{
+            background: rgb(75,0,130);
+            height: 100%;
+            padding: 30px;
         }
-
-        .options_menu a{
-            color: #ffffffb2;
-            cursor: default;
-            display: block;
+       
+        .sidebar .nav-links li{
+            list-style: none;
             position: relative;
-            transition: color 300ms;
+
         }
 
-        .options_menu a:hover{
-            color: white;
-        }
-
-        .options_menu .option{
-            padding: 20px 0px;
-            display: flex ;
-            align-items: center;
-            position: relative;
-        }
-
-        .options_menu .option span{
-            margin-right: 20px;
-            width: 20px;
-            cursor: pointer;
-
-        } 
-
-        .options_menu .option h4{
-            font-weight: 300;
-            cursor: pointer;
-        }
-
-        a.selected{
+        .sidebar .nav-links li i{
+            height: 50px;
+            min-width: 66px;
+            text-align: center;
+            line-height: 50px;
             color: #fff;
         }
 
-        .selected:before{
-            content: '';
-            width: 3px;
-            height: 80%;
-            background-color: white;
-            position: absolute;
-            top: 10%;
-            left: -30px;
+        
 
-        }
 
-        /* Class para usar em JavaScript */
 
-        .body_move{
-            margin-left: 250px;
 
-        }
 
-        .menu_side_move{
-            width: 250px;
-        }
-
-       
     </style>
 </head>
 <body id="body">
@@ -176,65 +101,44 @@
         $Logado = ($_SESSION['Usuario']);
     ?>
 
-     <header>
-          <div class="icon_menu">
-              <i class="fas fa-bars" id="btn_open"></i>
-          </div>
-     </header>
+    <div class="sidebar">
+        <div class="logo-details">
+           <i class='bx bxs-face-mask'></i>
+           <span class="logo_name">Nome</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#">
+                  <i class='bx bx-grid-alt'></i>
+                  <span class="link_name">oii</span>
+                </a>
+            </li>
 
-          <div class="menu_side" id="menu_side">
-              <div class="name_page">
-                  <!-- <i class="fab fa-youtube"></i> -->
-                  <h4>Nome</h4>
-              </div>     
+            <li>
+                <a href="#">
+                <i class='bx bxs-user-plus' ></i>
+                  <span class="link_name">Clientes</span>
+                </a>
+            </li>
 
-          <div class="options_menu">
-
-
-              <a href="#" class="selected">
-                  <div class="option">
-                      <!-- <i class="fas fa-home" title="Gráficos">Início</i> -->
-                        <span><ion-icon name="people-outline"></ion-icon></span>
-                        <span class="title">Clientes</span>
-                  </div>
-              </a>
-
-              <a href="#">
-                  <div class="option">
-                      <!-- <i class="fas fa-home" title="graficos">Gráficos</i> -->
-                       <span><ion-icon name="cellular-outline"></ion-icon></span>
-                       <span class="title">Gráficos</span>
-                  </div>
-              </a>
-
-               <a href="#">
-                  <div class="option">
-                       <span><ion-icon name="reader-outline"></ion-icon></span>
-                       <span class="title">Pesquisas</span>
-                  </div>
-              </a> 
-              
-              
-              <a href="#">
-                  <div class="option">
-                      <span><ion-icon name="exit-outline"></ion-icon></span>
-                      <span class="title">Sair</span>
-                  </div>
-              </a> 
-
-            
-          </div>
+            <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <i class='bx bx-line-chart'></i>
+                    <span class="link_name">Gráficos</span>
+                  </a>
+                    <i class='bx bx-chevron-down'></i>
+                </div>
+            </li>
+        </ul>
     </div>
-<main>
-    <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-         Earum harum nemo rerum et illo repellat perspiciatis ullam nobis numquam,
-         delectus neque error,
-         dolorem beatae tenetur deleniti quibusdam exercitationem quasi molestiae.
-         Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        
-    </p>
-</main>
+
+
+
+
+
+
+    
           <script src="script.js"></script>
           <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
           <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
