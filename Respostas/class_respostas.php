@@ -20,16 +20,16 @@ class Respostas{
     private $Email_resposta;
 
     /**
-     * Data de Nascimento de quem respondeu a pesquisa
+     * Tipo da Pesquisa
      * @var string
      */
-    private $Dt_nasc;
+    private $Tp_pesquisa;
     
     /**
-     * Chave Estrangeira que define o tipo de pesquisa enviada
+     * ID da Pesquisa 
      * @var integer
      */
-    private $fk_Id_pergunta;
+    private $Id_pesquisa;
 
 
     //----------Sets e Gets----------//
@@ -84,34 +84,34 @@ class Respostas{
     }
 
     /*
-        Obtem a data de Nascimento de quem enviou a Resposta
+        Obtem o Tipo de Pesquisa
     */
-    public function getDt_nasc()
+    public function getTp_pesquisa()
     {
-        return $this->Dt_nasc;
+        return $this->Tp_pesquisa;
     }
 
     /*
-        Define a data de Nascimento de quem enviou a Resposta
+        Define o tipo de Pesquisa
     */
-    public function setDt_nasc($Dn_r)
+    public function setTp_pesquisa($Tp_pq)
     {
-        $this->Dt_nasc = $Dn_r;
+        $this->Tp_pesquisa = $Tp_pq;
     }
 
     /*
-        Obtem a chave estrangeira
+        Obtem o ID da Pesquisa
     */
-    public function getFk_Id_pergunta()
+    public function getId_pesquisa()
     {
-        return $this->fk_Id_pergunta;
+        return $this->Id_pesquisa;
     }
 
     /*
-        Define a Chave estrangeira
+        Define o ID da Pesquisa
     */
-    public function setFk_Id_pergunta($fk_p)
+    public function setId_pesquisa($Id_p)
     {
-        $this->fk_Id_pergunta = $fk_p;
+        $this->Id_pesquisa = $Id_p;
     }
 }

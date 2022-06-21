@@ -1,10 +1,11 @@
 <?php 
-include '../Conexaopesquisas.php';
+include '../../Cadastro/conexao.php';
 
 class En_pesquisa
 {
 	public function incluir(ValNps  $n){
-  
+		
+		// Envio das respostas dentro da tabela resposta 
 		$sql = "INSERT INTO Respostas(Vlr_resposta, Email_resposta,Dt_nasc) VALUES (?,?,?)";
 		$bd = new Conexao();
 		$con = $bd->getConexao();
@@ -14,6 +15,7 @@ class En_pesquisa
 		$stm->bindValue(3, $n->getDtnps());
 		$resultado = $stm->execute();
 
+		// Envio da resposta da metrica dentro da tabela Csat
 		$nps =$_GET['nps'];
 
 			if ($nps<=6)
@@ -40,7 +42,15 @@ class En_pesquisa
 		
 			$vlr_resultado = $vlr->execute();
 
+			//Envio da valor da pergunta, tipo da pesquisa e da pergunta  
+			$sql_vn="INSERT INTO Perguntas(Vlr_pergunta /*, Nm_pergunta*/) VALUE (1 /*,'Em uma escala de 0 a 10, o quanto você indicaria a nossa empresa para um amigo e/ou familiar?'*/)";
+			$sql_t= "INSERT INTO Pesquisa(Tp_pesquisa) VALUE ('NPS')";
+			$vn= $con->prepare($sql_vn); 
+			$t= $con->prepare($sql_t); 
+			$vn_resultado = $vn->execute();
+			$t_resultado = $t->execute();
 
+			// Condição do execute, se ele funcionar a resposta foi enviada 
 			if($resultado){
 			 ?>
 				<script> alert('Sua resposta foi enviada com Sucesso!')
