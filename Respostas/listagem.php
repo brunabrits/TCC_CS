@@ -53,26 +53,48 @@
           <th>ID</th>
           <th>Resposta</th>
           <th>Email</th>
-          <th>Data de Nascimento</th>
           <th>Tipo da Pesquisa</th>
+          <th>Pergunta</th>
         </tr>
       </thead>
 
       <tbody>
         <?php 
-        if(is_array($respostasDao->Buscar($respostas)) || is_object($respostasDao->Buscar($respostas))){
-        foreach($respostasDao->Buscar($respostas) as $resultados) : ?>
-          <tr>
-            <td><?= $resultados['Id_resposta']?></td>
-            <td><?= $resultados['Vlr_resposta']?></td>
-            <td><?= $resultados['Email_resposta']?></td>
-            <td><?= date('d/m/Y', strtotime($resultados['Dt_nasc']))?></td>
-            <td><?= $resultados['fk_Id_pergunta']?></td>
-          </tr>
-        <?php endforeach; 
-        }else{
-          
-        }
+          if(is_array($respostasDao->BuscarR($respostas)) || is_object($respostasDao->BuscarR($respostas))) 
+          {
+            foreach($respostasDao->BuscarR($respostas) as $resultados) : ?>
+              <tr>
+                <td><?= $resultados['Id_resposta']?></td>
+                <td><?= $resultados['Vlr_resposta']?></td>
+                <td><?= $resultados['Email_resposta']?></td>
+  
+            <?php endforeach; 
+
+            }else{
+            
+            }
+            
+            if(is_array($respostasDao->BuscarPq($respostas)) || is_object($respostasDao->BuscarPq($respostas)))
+            {
+            foreach($respostasDao->BuscarPq($respostas) as $resultados) : ?>
+                <td><?= $resultados['Tp_pesquisa'] ?></td>
+            <?php endforeach; 
+
+            }else{
+
+            }
+
+            if(is_array($respostasDao->BuscarPg($respostas)) || is_object($respostasDao->BuscarPg($respostas)))
+            {
+            foreach($respostasDao->BuscarPg($respostas) as $resultados) : ?>
+                <td><?= $resultados['Nm_pergunta'] ?></td>
+              </tr>
+            <?php endforeach; 
+
+            }else{
+
+            }
+
         ?>
 
       </tbody>
