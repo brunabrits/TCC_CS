@@ -21,7 +21,7 @@
 
 
     <label for="">3. Qual seu e-mail?</label><br>
-    <input type="email" name="emainps" ><br>
+    <input type="email" name="emainps" required><br>
 
     <label for="">4. Em uma escala de 0 a 10, o quanto você indicaria a nossa empresa para um amigo e/ou familiar?</label> <br>
     <input type="radio" name="nps" value="0">0

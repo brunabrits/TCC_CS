@@ -4,9 +4,10 @@ include '../Cadastro/conexao.php';
 
 class RespostasDao
 {
-    public function BuscarR()
+    public function Buscar()
     {
         $sql = 'SELECT Id_resposta, Vlr_resposta, Email_resposta FROM Respostas;';
+        $sql2 = 'SELECT Id_pesquisa, Tp_pesquisa FROM Pesquisa;';
 
         $bd = new Conexao();
 
@@ -23,7 +24,7 @@ class RespostasDao
         }
     }
 
-    public function BuscarPq()
+    /*public function BuscarPq()
     {
         $sql = 'SELECT Tp_pesquisa FROM Pesquisa;';
 
@@ -60,7 +61,7 @@ class RespostasDao
             return $resultado;
         }
     }
-
+*/
 }
 
 

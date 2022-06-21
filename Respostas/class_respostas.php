@@ -26,10 +26,10 @@ class Respostas{
     private $Tp_pesquisa;
     
     /**
-     * Pergunta que foi feita 
+     * ID da Pesquisa 
      * @var integer
      */
-    private $Nm_pergunta;
+    private $Id_pesquisa;
 
 
     //----------Sets e Gets----------//
@@ -100,18 +100,18 @@ class Respostas{
     }
 
     /*
-        Obtem o nome da Pergunta
+        Obtem o ID da Pesquisa
     */
-    public function getNm_pergunta()
+    public function getId_pesquisa()
     {
-        return $this->Nm_pergunta;
+        return $this->Id_pesquisa;
     }
 
     /*
-        Define o nome da Pergunta
+        Define o ID da Pesquisa
     */
-    public function setNm_pergunta($Nm_pg)
+    public function setId_pesquisa($Id_p)
     {
-        $this->Nm_pergunta = $Nm_pg;
+        $this->Id_pesquisa = $Id_p;
     }
 }
