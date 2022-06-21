@@ -6,10 +6,11 @@ $Assunto = $_POST["Assunto"];
 $Msg = $_POST["Msg"];
 
 //erros na inclusão da biblioteca 
-//include 'PHPMailer/PHPMailerAutoload.php';
-require_once("PHPMailerAutoload.php");
+include 'PHPMailer/PHPMailerAutoload.php';
+//require_once("PHPMailerAutoload.php");
+// git clone https://github.com/PHPMailer/PHPMailer.git
 
-$mail = new PHPMailer;
+$mail = new PHPMailer();
 $mail->isSMTP();
 
 $mail->Host = "smtp.gmail.com";
