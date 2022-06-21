@@ -43,11 +43,8 @@ class En_pesquisa
 			$vlr_resultado = $vlr->execute();
 
 			//Envio da valor da pergunta, tipo da pesquisa e da pergunta  
-			$sql_vn="INSERT INTO Perguntas(Vlr_pergunta /*, Nm_pergunta*/) VALUE (1 /*,'Em uma escala de 0 a 10, o quanto você indicaria a nossa empresa para um amigo e/ou familiar?'*/)";
-			$sql_t= "INSERT INTO Pesquisa(Tp_pesquisa) VALUE ('NPS')";
-			$vn= $con->prepare($sql_vn); 
+			$sql_t= "update Respostas set fk_Tp_pesquisa = (select max(Id_pesquisa) from Pesquisa) where Id_resposta =(select max(Id_resposta) from Respostas);";
 			$t= $con->prepare($sql_t); 
-			$vn_resultado = $vn->execute();
 			$t_resultado = $t->execute();
 
 			// Condição do execute, se ele funcionar a resposta foi enviada 

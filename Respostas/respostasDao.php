@@ -6,16 +6,18 @@ class RespostasDao
 {
     public function Buscar()
     {
-        $sql = 'SELECT Id_resposta, Vlr_resposta, Email_resposta FROM Respostas;';
-        $sql2 = 'SELECT Id_pesquisa, Tp_pesquisa FROM Pesquisa;';
+        $sql = 'SELECT Pesquisa.Tp_pesquisa, Respostas.Id_resposta, Respostas.Vlr_resposta, Respostas.Email_resposta FROM Pesquisa INNER JOIN Respostas ON Pesquisa.Id_pesquisa = Respostas.fk_Tp_pesquisa;';
 
         $bd = new Conexao();
 
         $con = $bd->getConexao();
 
         $stm = $con->prepare($sql);
-
+        
+        
         $stm->execute();
+        
+
 
         if($stm->rowCount()>0)
         {
