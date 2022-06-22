@@ -28,9 +28,15 @@ $Qnt = (($mtfacil*1) + ($facil*2) + ($neutro*3) + ($dificil*4) + ($mtdificil*5))
 
 $Total = $mtfacil + $facil + $neutro + $dificil + $mtdificil;
 
-$Ces = $Qnt / $Total;
 
-print_r('Nota CES = ' . number_format($Ces, 2, ',','.'));
+try{
+  $Ces = $Qnt / $Total;
+  print_r('Nota CES = ' . number_format($Ces, 2, ',','.'));
+}
+
+catch(DivisionByZeroError $e){
+  echo "Não há dados suficientes para gerar o Gráfico de CES";
+}
 
   class GraficosDao{
 
@@ -125,7 +131,7 @@ $Resultado=array($mtfacil, $facil, $neutro, $dificil, $mtdificil);
         ]);
 
         var options = {
-          title: 'Grafico CSAT',
+          title: 'Gráfico CES',
           colors: ['#00FF00','#7CFC00','yellow', '(139,0,0)', '#FF0000']
           
         };

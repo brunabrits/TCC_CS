@@ -15,13 +15,18 @@ $promotor=intval($Res_d);
 $neutro=intval($Res_n);
 $detrator=intval($Res_p);
 
-$Total = $neutro+$promotor+$detrator;
+$Total = $neutro + $promotor + $detrator;
 
-$Calculo = (($detrator - $promotor ) / $Total);
 
-$Nps = $Calculo * 100;
+try {
+  $Calculo = (($detrator - $promotor ) / $Total);
+  $Nps = $Calculo * 100;
+  print_r('Nota NPS = ' . number_format($Nps, 1, ',','.'));
+}
 
-print_r('Nota NPS = ' . number_format($Nps, 1, ',','.'));
+catch(DivisionByZeroError $e){
+  echo "Não há dados suficientes para gerar o Gráfico de NPS";
+}
 
   class GraficosDao{
 
@@ -90,7 +95,7 @@ $Resultado=array($detrator, $neutro, $promotor);
         ]);
 
         var options = {
-          title: 'Grafico NPS',
+          title: 'Gráfico NPS',
           pieHole: 0.4,
           colors: ['#00008B','#DAA520','#800000']
         };

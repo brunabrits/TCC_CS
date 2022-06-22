@@ -23,14 +23,17 @@ $neutro = intval($Res_n);
 $insatisfeito = intval($Res_i);
 $mtinsatisfeito = intval($Res_mti);
 
-
 $Total = $mtsatisfeito + $satisfeito + $neutro + $insatisfeito + $mtinsatisfeito;
+  
+try{
+  $Calculo = (($mtsatisfeito + $satisfeito) / $Total);
+  $Csat = $Calculo * 100;
+  print_r('Nota CSAT = ' . number_format($Csat, 1, ',','.'));
+}
 
-$Calculo = (($mtsatisfeito + $satisfeito) / $Total);
-
-$Csat = $Calculo * 100;
-
-print_r('Nota CSAT = ' . number_format($Csat, 1, ',','.'));
+catch(DivisionByZeroError $e){
+  echo "Não há dados suficientes para gerar o Gráfico de CSAT";
+}
 
   class GraficosDao{
 
