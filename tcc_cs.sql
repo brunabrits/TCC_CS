@@ -17,9 +17,9 @@ create table Pesquisa(
 
 
 create table Nps(
-    Id_nps 			int primary key auto_increment,
+    Id_nps 			        int primary key auto_increment,
     Tp_nps_promotor 		int(2)  null,
-    Tp_nps_neutro 		int(1)  null,
+    Tp_nps_neutro 		    int(1)  null,
     Tp_nps_detrator 		int(1)  null
 );
 
@@ -58,11 +58,14 @@ create table Perguntas(
 );
 
 create table Respostas(
-    Id_resposta 		int not null primary key auto_increment,
-    Vlr_resposta 		int not null,
-    Email_resposta 		varchar(50) not null,
-    Dt_nasc                     Date not null
+    Id_resposta 		        int not null primary key auto_increment,
+    Vlr_resposta 		        int not null,
+    Email_resposta 		        varchar(50) not null,
+    Dt_nasc                     Date not null,
 	
+    fk_Tp_pesquisa      int null,
+
+    foreign key         (fk_Tp_pesquisa) references     Pesquisa(Id_pesquisa)
 );    
 
 
