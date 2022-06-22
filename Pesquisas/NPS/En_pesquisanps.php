@@ -8,14 +8,6 @@ class En_pesquisa
 		$bd = new Conexao();
 		$con = $bd->getConexao();
 		
-		//Envio da valor da pergunta, tipo da pesquisa e da pergunta  
-		$sql_pr= "update Respostas set fk_Tp_pesquisa = (select max(Id_pesquisa) from Pesquisa) where Id_resposta =(select max(Id_resposta) from Respostas);";
-		$pr= $con->prepare($sql_pr); 
-		$pr_resultado = $pr->execute();
-
-		$sql_tp= "INSERT INTO Pesquisa(Tp_pesquisa) VALUE ('NPS')";
-		$tp= $con->prepare($sql_tp); 
-		$tp_resultado = $tp->execute();
 		
 		// Envio das respostas dentro da tabela resposta 
 		$sql = "INSERT INTO Respostas(Vlr_resposta, Email_resposta,Dt_nasc) VALUES (?,?,?)";
@@ -52,7 +44,17 @@ class En_pesquisa
 		
 			$vlr_resultado = $vlr->execute();
 
-			
+			//Envio da valor da pergunta, tipo da pesquisa e da pergunta  
+			$sql_tp= "INSERT INTO Pesquisa(Tp_pesquisa) VALUE ('NPS')";
+			$tp= $con->prepare($sql_tp); 
+			$tp_resultado = $tp->execute();
+
+			$sql_pr= "UPDATE Respostas SET fk_Tp_pesquisa = (SELECT MAX(Id_pesquisa) FROM Pesquisa) WHERE Id_resposta =(SELECT MAX(Id_resposta) FROM Respostas);";
+			$pr= $con->prepare($sql_pr); 
+			$pr_resultado = $pr->execute();
+
+
+	
 			// Condição do execute, se ele funcionar a resposta foi enviada 
 			if($resultado){
 			 ?>
