@@ -4,11 +4,21 @@ include '../../Cadastro/conexao.php';
 class En_pesquisa
 {
 	public function incluir(ValNps  $n){
+
+		$bd = new Conexao();
+		$con = $bd->getConexao();
+		
+		//Envio da valor da pergunta, tipo da pesquisa e da pergunta  
+		$sql_pr= "update Respostas set fk_Tp_pesquisa = (select max(Id_pesquisa) from Pesquisa) where Id_resposta =(select max(Id_resposta) from Respostas);";
+		$pr= $con->prepare($sql_pr); 
+		$pr_resultado = $pr->execute();
+
+		$sql_tp= "INSERT INTO Pesquisa(Tp_pesquisa) VALUE ('NPS')";
+		$tp= $con->prepare($sql_tp); 
+		$tp_resultado = $tp->execute();
 		
 		// Envio das respostas dentro da tabela resposta 
 		$sql = "INSERT INTO Respostas(Vlr_resposta, Email_resposta,Dt_nasc) VALUES (?,?,?)";
-		$bd = new Conexao();
-		$con = $bd->getConexao();
 		$stm = $con->prepare($sql);
 		$stm->bindValue(1, $n->getNps());
 		$stm->bindValue(2, $n->getEmainps());
@@ -42,11 +52,7 @@ class En_pesquisa
 		
 			$vlr_resultado = $vlr->execute();
 
-			//Envio da valor da pergunta, tipo da pesquisa e da pergunta  
-			$sql_t= "update Respostas set fk_Tp_pesquisa = (select max(Id_pesquisa) from Pesquisa) where Id_resposta =(select max(Id_resposta) from Respostas);";
-			$t= $con->prepare($sql_t); 
-			$t_resultado = $t->execute();
-
+			
 			// Condição do execute, se ele funcionar a resposta foi enviada 
 			if($resultado){
 			 ?>

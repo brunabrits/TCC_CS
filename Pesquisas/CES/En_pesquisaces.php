@@ -5,15 +5,24 @@ include '../../Cadastro/conexao.php';
 class En_pesquisa
 {
 	public function incluir(ValCes $s){
-		
-		$sql = "INSERT INTO Respostas(Vlr_resposta, Email_resposta,Dt_nasc) VALUES (?,?,?)";
+
 		$bd = new Conexao();
 		$con = $bd->getConexao();
+		
+		//Envio da valor da pergunta, tipo da pesquisa e da pergunta  
+		$sql_pr= "update Respostas set fk_Tp_pesquisa = (select max(Id_pesquisa) from Pesquisa) where Id_resposta =(select max(Id_resposta) from Respostas);";
+		$pr= $con->prepare($sql_pr); 
+		$pr_resultado = $pr->execute();
+
+		$sql_tp= "INSERT INTO Pesquisa(Tp_pesquisa) VALUE ('CES')";
+		$tp= $con->prepare($sql_tp); 
+		$tp_resultado = $tp->execute();
+		
+		$sql = "INSERT INTO Respostas(Vlr_resposta, Email_resposta,Dt_nasc) VALUES (?,?,?)";
 		$stm = $con->prepare($sql);
 		$stm->bindValue(1, $s->getCes());
 		$stm->bindValue(2, $s->getEmaices());
 		$stm->bindValue(3, $s->getDtces());
-	  //$stm->bindValue(1, $s->getNomeces());
 		$resultado = $stm->execute();
 
 		$ces =$_GET['ces'];
@@ -49,14 +58,6 @@ class En_pesquisa
 		}
 
 		$vlr_resultado = $vlr->execute();
-
-		//Envio da valor da pergunta, tipo da pesquisa e da pergunta  
-		$sql_vn="INSERT INTO Perguntas(Vlr_pergunta /*, Nm_pergunta*/) VALUE (3 /*,'Em uma escala de 0 a 10, o quanto você indicaria a nossa empresa para um amigo e/ou familiar?'*/)";
-		$sql_t= "INSERT INTO Pesquisa(Tp_pesquisa) VALUE ('CES')";
-		$vn= $con->prepare($sql_vn); 
-		$t= $con->prepare($sql_t); 
-		$vn_resultado = $vn->execute();
-		$t_resultado = $t->execute();
 
 		// Condição do execute, se ele funcionar a resposta foi enviada 
 		if($resultado){
