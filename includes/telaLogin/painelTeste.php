@@ -60,7 +60,12 @@
         .sidebar .nav-links{
             background: rgb(75,0,130);
             height: 100%;
-            padding-top: 30px;
+            padding-top: 30px 0 150px 0;
+            overflow: auto;
+        }
+
+        .sidebar .nav-links::-webkit-scrollbar{
+            display: none;
         }
        
         .sidebar .nav-links li{
@@ -89,6 +94,11 @@
             line-height: 50px;
             color: #fff;
             font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar .nav-links li.showMenu i.arrow{
+            transform: rotate(-180deg);
         }
 
         .sidebar .nav-links li a{
@@ -107,7 +117,11 @@
             padding: 6px 6px 14px 80px;
             margin-top: -10px;
             background: #ceaadb;
-            /* display: none; */
+            display: none; 
+        }
+
+        .sidebar .nav-links li.showMenu .sub-menu{
+            display: block;  
         }
 
         .sidebar .nav-links li .sub-menu a{
@@ -135,6 +149,8 @@
            pointer-events: none;
         }
 
+        
+
         .sidebar.close .nav-links li:hover .sub-menu{
             top: 0;
             opacity: 1;
@@ -153,6 +169,37 @@
            opacity: 1;
            display: block;
         }
+
+        .home-section{
+            position: relative;
+            background: #E4E9F7;
+            height: 100vh;
+            left: 260px;
+            width: calc(100% - 260px)
+        }
+
+        .home-section .home-content{
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        .home-section .home-content .bx-menu,
+        .home-section .home-content .text{
+            color: #11101d;
+            font-size: 35px;
+        }
+
+        .home-section .home-content .bx-menu{
+            margin: 0 15px;
+        }
+
+        .home-section .home-content .text{
+            font-size: 26px;
+            font-weight: 600;
+        }
+
+
         
 
 
@@ -177,7 +224,7 @@
         $Logado = ($_SESSION['Usuario']);
     ?>
 
-    <div class="sidebar close">
+    <div class="sidebar">
         <div class="logo-details">
            <i class='bx bxs-face-mask'></i>
            <span class="logo_name">Nome</span>
@@ -197,7 +244,7 @@
                     <i class='bx bx-signal-4'></i>
                     <span class="link_name">Gráficos</span>
                   </a>
-                    <i class='bx bx-chevron-down'></i>
+                  <i class='bx bxs-chevron-down arrow'></i>
                 </div>
                 <ul class="sub-menu">
                     <li><a href="#">Gráfico NPS</a></li>
@@ -210,9 +257,9 @@
                 <div class="iocn-link">
                   <a href="#">
                     <i class='bx bx-edit-alt'></i>
-                    <span class="link_name">Pesquisa</span>
+                    <span class="link_name">Pesquisas</span>
                   </a>
-                    <i class='bx bx-chevron-down'></i>
+                    <i class='bx bxs-chevron-down arrow'></i>
                 </div>
                 <ul class="sub-menu">
                     <li><a href="#">Pesquisa NPS</a></li>
@@ -223,9 +270,33 @@
         </ul>
     </div>
 
+    <section class="home-section">
+        <div class="home-content">
+           <i class='bx bx-menu'></i>
+           <span class="text">Drop Dows Sidebar</span>
+        </div>
+    </section>
+
+<script>
+    let arrow = document.querySelectorAll(".arrow");
+    for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e)=>{
+
+            let arrowParent = e.target.parentElement.parentElement;
+            console.log(arrowParent);
+            arrowParent.classList.toggle("showMenu");
+       });
+    }
 
 
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".bx-menu");
+    console.log(sidebarBtn);
+    sidebarBtn.addEventListener("click", ()={
+        sidebar.classList.toggle("close");
+    });
 
+</script>
 
 
     
