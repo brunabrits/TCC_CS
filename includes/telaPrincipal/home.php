@@ -33,7 +33,7 @@
           display: inline-block;
           width: 40%;
           height: 60%;
-          font-size: 1.7vw;
+          font-size: 1.4vw;
           
         }
 
@@ -147,6 +147,7 @@
           background-color: white;
           height: 48vw; 
           display: flex;
+          font-size: 20px;
         }
 
        /*fotter*/
@@ -259,7 +260,6 @@
           border: 1px solid white;
           transition: all 0.5s ease;
           font-size: 15px;
-
          
           }
          
@@ -339,7 +339,7 @@
 
 
     <nav class="navbar navbar-expand-lg navbar-dark" id="nav" style=" background-color: rgb(75,0,130)">
-      <a class="navbar-brand" href="#">Nome</a>
+      <a class="navbar-brand" href="#">S.O.S</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -379,12 +379,10 @@
     
     <section class="fundo">
     <div class="texto">
-      <h2>Layout Container</h2><!--<br><br>-->
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-         Molestiae temporibus nostrum fuga,Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-         Molestiae temporibus nostrum fuga,
-
-
+      <h2>Search of Success!</h2><!--<br><br>-->
+      <p>O consumidor é o pilar principalmente para o crescimento de uma empresa, nesse caso,
+        o Customer Success  busca garantir o sucesso do cliente ao adquirir serviço ou produto de uma determinada instituição, através de métricas, 
+        que são responsáveis por verificar a experiência do cliente, promovendo o desenvolvimento contínuo do seu negócio.
       </p>
     </div>
 
