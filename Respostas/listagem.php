@@ -74,29 +74,7 @@
             
             }
             
-            /*if(is_array($respostasDao->BuscarPq($respostas)) || is_object($respostasDao->BuscarPq($respostas)))
-            {
-            foreach($respostasDao->BuscarPq($respostas) as $resultados) : ?>
-                <td><?= $resultados['Tp_pesquisa'] ?></td>
-                <td><?= $resultados['Id_pesquisa'] ?></td>
-              </tr>
-            <?php endforeach; 
-
-            }else{
-
-            }
-
-            if(is_array($respostasDao->BuscarPg($respostas)) || is_object($respostasDao->BuscarPg($respostas)))
-            {
-            foreach($respostasDao->BuscarPg($respostas) as $resultados) : ?>
-                <td><?= $resultados['Nm_pergunta'] ?></td>
-              </tr>
-            <?php endforeach; 
-
-            }else{
-
-            }
-            */
+            
         ?>
 
       </tbody>

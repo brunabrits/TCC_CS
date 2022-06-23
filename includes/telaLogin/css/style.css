@@ -22,6 +22,7 @@ input{
     padding: 10px;
     border: none;
     outline: none;
+    width: 100px;
 }
 
 .btn{

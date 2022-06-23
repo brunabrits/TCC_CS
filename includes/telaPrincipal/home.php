@@ -43,19 +43,20 @@
         
         h2{
           font-size: 3vw;
-          margin-bottom: 55px;
+          margin-bottom: 20px;
+        }
+        
+        h6{
+          margin-left: 40%;
+          margin-bottom: 50px;
         }
       
         img{
          width:90%;
          
-      
         }     
 
         .test{
-        /*  display: inline-block;
-          width: 55%;
-       /*   height: 55%;*/
         text-align: center;
         padding-top: 35px;
         }
@@ -262,16 +263,6 @@
           font-size: 15px;
          
           }
-         
-
-         /* .footer-col .midias-sociais a i{
-          font-size: 15px;
-        }  */
-
-         /* .footer-col .midias-sociais a:hover{
-          color: rgb(75,0,130);
-          background-color: white;
-        }  */
 
          .icone{
         
@@ -281,12 +272,6 @@
           align-items: center;
        
         } 
-
-        /* display: inline-flex;
-          align-items: center;
-          justify-content: center; */
-
-
 
         /* footer responsivo */
 
@@ -328,8 +313,21 @@
         .imgtest{
           width: 30vw;
         }
+
+
+        .texto-sub-email{
+            color: white; 
+        }
+
+        .texto-sub-email{
+            color: white; 
+        }
+
           }
         
+        .texto-sub-email{
+            color: white; 
+        }  
 
 
       </style>
@@ -345,31 +343,6 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item ">
-            <a class="nav-link" href="#">Plataforma</a>
-          </li>
-
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Clientes</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Pesquisas
-            </a>
-
-            <div class="dropdown-menu"  aria-labelledby="navbarDropdownMenuLink">
-              <h6 class="dropdown-header">Tipos de pesquisa</h6>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="../../TCC_CS/Pesquisas/NPS/PesquisaNps.php">Pesquisa NPS</a>
-              <a class="dropdown-item" href="../../TCC_CS/Pesquisas/CES/PesquisaCes.php">Pesquisa CES</a>
-              <a class="dropdown-item" href="../../TCC_CS/Pesquisas/CSAT/PesquisaCsat.php">Pesquisa CSAT</a>  
-            </div>
-          </li>
-        </ul>
-       
         <div class="ladinho">
           <button type="button" class="btn btn-outline-light  mr-3 "><a href="../TCC_CS/includes/telaLogin/entrar.php" style="text-decoration:none" >Login</a></button> 
           <button type="button" class="btn btn-outline-light" ><a href="../TCC_CS/Cadastro/telaCadastro.php" style="text-decoration:none" >Cadastre-se</a></button>
@@ -379,7 +352,8 @@
     
     <section class="fundo">
     <div class="texto">
-      <h2>Search of Success!</h2><!--<br><br>-->
+      <h2>Search of Success!</h2>
+      <h6>O Socorro para sua Empresa</h6>
       <p>O consumidor é o pilar principalmente para o crescimento de uma empresa, nesse caso,
         o Customer Success  busca garantir o sucesso do cliente ao adquirir serviço ou produto de uma determinada instituição, através de métricas, 
         que são responsáveis por verificar a experiência do cliente, promovendo o desenvolvimento contínuo do seu negócio.
@@ -499,15 +473,23 @@
           <div class="footer-col">
               <h4>Mensagem</h4>
               <!-- form sub -->
-              
-                    <div class="form-sub">
-                       <form method="post" action="email.php">
-                          <input  type="email" placeholder="Digite o seu e-mail" required><br><br>
-                  	      <textarea  id="mensagem" name="mensagem" placeholder="Digite sua mensagem" rows="3" cols="40"></textarea><br>
-                          <button class="btn btn-outline-light type="submit" name="Botao"">Enviar</button>
-                       </form>    
+
+              <div class="form-sub">
+                        <form action="https://formsubmit.co/customersuccessetec@gmail.com" method="POST" class="Form">
+                            <label class="texto-sub-email" for="name">Nome</label>
+                            <input type="text" name="name" id="name" required />
+                            <label  class="texto-sub-email" for="email">E-mail</label>
+                            <input type="email" name="email" id="email" required />
+                            <label class="texto-sub-email" for="message">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required rows="3"
+                                cols="40"></textarea><br>
+                            <input type="hidden" name="_captcha" value="false" />
+                            <input type="hidden" name="_next" value="http://127.0.0.1:80/TCC_CS/home.php" /> <!--Arrumar locaçaõ quando as paginas estiverem conectadas-->
+                            <button class="btn btn-outline-light" type="submit">Enviar</button>
+                        </form>
                     </div>
-               
+                   
+        
               <!-- end form sub -->
               
           </div> <!-- end footer col -->
