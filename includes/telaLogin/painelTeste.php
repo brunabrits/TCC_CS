@@ -28,7 +28,7 @@ $Logado = ($_SESSION['Usuario']);
     
     <!-- Boxiocns CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
    
 <body>
@@ -83,7 +83,7 @@ $Logado = ($_SESSION['Usuario']);
         <li>
             <div class="icon-link">
                <a href="logout.php">
-                <i class="fa-solid fa-arrow-right-from-bracket"> </i>
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
                    <span class="link_name">Sair</span>
                </a>
            

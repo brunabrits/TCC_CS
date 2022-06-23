@@ -12,9 +12,10 @@
         <link rel="stylesheet" href="css/home.css">
       <style>
 
-        *{
-          font-family: Arial, Helvetica, sans-serif;
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+        *{
+          font-family: 'Poppins', sans-serif;
          }
 
          @media (min-width: 768px){
@@ -48,7 +49,7 @@
         
         h6{
           margin-left: 40%;
-          margin-bottom: 50px;
+          margin-bottom: 50px;   
         }
       
         img{
@@ -432,7 +433,7 @@
           <div class="footer-col">
               <h4>Quem somos?</h4>
               <ul>
-                  <li><p>Somos a (nome), uma empresa fundada em 2022 especializada em Customer Success,
+                  <li><p>Somos a S.O.S, uma empresa fundada em 2022 especializada em Customer Success,
                      com o objetivo de aprimorar a relação das empresas com seus clientes,
                      através de estratégias,aplicações e métricas desenvolvidas.</p></li>
               </ul>
