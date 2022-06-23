@@ -1,3 +1,15 @@
+    <?php
+        session_start();
+
+        if( (!isset($_SESSION['Usuario']) == true) and (!isset($_SESSION['Chave']) == true) )
+        {
+            unset ($_SESSION['Usuario']);
+            unset ($_SESSION['Chave']);
+
+            header('location:entrar.php');
+        }
+        $Logado = ($_SESSION['Usuario']);
+    ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -198,31 +210,8 @@
             font-size: 26px;
             font-weight: 600;
         }
-
-
-        
-
-
-
-
-
     </style>
 </head>
-<body id="body">
-    <!-- <h1>Seja bem vindo ao Sistema</h1> -->
-
-    <?php
-        session_start();
-
-        if( (!isset($_SESSION['Usuario']) == true) and (!isset($_SESSION['Chave']) == true) )
-        {
-            unset ($_SESSION['Usuario']);
-            unset ($_SESSION['Chave']);
-
-            header('location:entrar.php');
-        }
-        $Logado = ($_SESSION['Usuario']);
-    ?>
 
     <div class="sidebar">
         <div class="logo-details">
