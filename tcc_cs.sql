@@ -12,9 +12,9 @@ create table Cliente(
 
 create table Pesquisa(
  Id_pesquisa 	int  primary key auto_increment,
- Tp_pesquisa 	varchar(4) null
- fk_Cliente 	int null,
- foreign key 	(fk_Cliente) references Cliente (Id_cliente),	
+ Tp_pesquisa 	varchar(4) null,
+ fk_Id_cliente 	int null,
+ foreign key 	(fk_Id_cliente) references Cliente (Id_cliente),	
 );
 
 
@@ -69,7 +69,3 @@ create table Respostas(
 
     foreign key         (fk_Tp_pesquisa) references     Pesquisa(Id_pesquisa)
 );    
-
-
-
-
