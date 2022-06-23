@@ -14,7 +14,7 @@ create table Pesquisa(
  Id_pesquisa 	int  primary key auto_increment,
  Tp_pesquisa 	varchar(4) null,
  fk_Id_cliente 	int null,
- foreign key 	(fk_Id_cliente) references Cliente (Id_cliente),	
+ foreign key 	(fk_Id_cliente) references Cliente (Id_cliente)	
 );
 
 

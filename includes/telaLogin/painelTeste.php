@@ -289,6 +289,16 @@
   }
 }
 
+    img{
+        height: 45vw;
+          
+    }
+
+    .imagem{
+        text-align: center;
+    }
+
+
    </style>
 <body>
 
@@ -354,6 +364,9 @@
     <div class="home-content">
       <i class='bx bx-menu' ></i>
     </div>
+    <div class="imagem">
+      <img src="visual-data-animate (1).svg" alt="anim">
+    </div>
   </section>
   <script>
   let arrow = document.querySelectorAll(".arrow");
@@ -370,5 +383,8 @@
     sidebar.classList.toggle("close");
   });
   </script>
+
+
+
 </body>
 </html>
