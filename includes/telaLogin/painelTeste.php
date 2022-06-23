@@ -256,6 +256,15 @@
                     <li><a href="../../TCC_CS/Pesquisas/CSAT/PesquisaCsat.php">pesquisa CSAT</a></li>
                 </ul>
             </li>
+            
+            <li>
+                <div class="icon-link">
+                    <a href="logout.php">
+                        <i class="fa-solid fa-door-open"></i>
+                        <span class="link_name">Sair</span>
+                    </a>
+                </div>
+            </li>
         </ul>
     </div>
 
