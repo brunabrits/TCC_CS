@@ -3,19 +3,19 @@
 $objeto = new GraficosDao();
 
 $Res_mts = $objeto->buscarmts('mts'). "<br>";
-print_r('Muito Satisfeito = ' . $Res_mts);
+// print_r('Muito Satisfeito = ' . $Res_mts);
 
 $Res_s = $objeto->buscars('s'). "<br>";
-print_r('Satisfeito = ' . $Res_s);
+// print_r('Satisfeito = ' . $Res_s);
 
 $Res_n = $objeto->buscarn('n'). "<br>";
-print_r('Neutro = ' . $Res_n);
+// print_r('Neutro = ' . $Res_n);
 
 $Res_i = $objeto->buscari('i'). "<br>";
-print_r('Insatisfeito = ' . $Res_i);
+// print_r('Insatisfeito = ' . $Res_i);
 
 $Res_mti = $objeto->buscarmti('mti'). "<br>";
-print_r('Muito Insatisfeito = ' . $Res_mti);
+// print_r('Muito Insatisfeito = ' . $Res_mti);
 
 $mtsatisfeito = intval($Res_mts);
 $satisfeito = intval($Res_s);
@@ -28,7 +28,7 @@ $Total = $mtsatisfeito + $satisfeito + $neutro + $insatisfeito + $mtinsatisfeito
 try{
   $Calculo = (($mtsatisfeito + $satisfeito) / $Total);
   $Csat = $Calculo * 100;
-  print_r('Nota CSAT = ' . number_format($Csat, 1, ',','.'));
+  // print_r('Nota CSAT = ' . number_format($Csat, 1, ',','.'));
 }
 
 catch(DivisionByZeroError $e){
@@ -108,6 +108,7 @@ $Resultado=array($mtsatisfeito, $satisfeito, $neutro, $insatisfeito, $mtinsatisf
 
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="css/graficoCsatT.css"/>  
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
@@ -140,6 +141,104 @@ $Resultado=array($mtsatisfeito, $satisfeito, $neutro, $insatisfeito, $mtinsatisf
     </script>
   </head>
   <body>
-    <div id="piechart" style="width: 1200px; height: 700px;"></div>
+  <main>
+
+<h1 class="title">Gráfico CSAT</h1>
+
+<div class="info-data">
+  <div class="card">
+    <div class="head">
+      <div>
+         <h2>icon face</h2>
+         <p>Muito Insatisfeito</p>
+         <p>Os clientes promotores são os consumidores que
+            sua empresa conseguiu fidelizar e que agem como verdadeiros propagadores do seu negócio.</p>
+      </div>
+      <i class="bx-bx-trending-up"></i>
+     </div> 
+     <!-- <span class="progress" data-value="50"></span>
+     <span class="label">50%</span> -->
+  </div> 
+  <div class="card">
+    <div class="head">
+      <div>
+         <h2>icon face</h2>
+         <p>Insatisfeito</p>
+         <p>Eles não estão propensos a fazer reclamações sobre a marca. Apesar disso, eles possivelmente também não serão consumidores frequentes.</p>
+      </div>
+      <i class="bx-bx-trending-up"></i>
+     </div> 
+     <!-- <span class="progress" data-value="50"></span>
+     <span class="label">50%</span> -->
+  </div> 
+  <div class="card">
+    <div class="head">
+      <div>
+         <h2>icon face</h2>
+         <p>Indiferente</p>
+         <p>O cliente detrator é o consumidor que teve uma experiência ruim com uma empresa e possivelmente fará reclamações.</p>
+      </div>
+      <i class="bx-bx-trending-up"></i>
+     </div> 
+     <!-- <span class="progress" data-value="50"></span>
+     <span class="label">50%</span> -->
+  </div> 
+  <div class="card">
+    <div class="head">
+      <div>
+         <h2>icon face</h2>
+         <p>Satisfeito</p>
+         <p>O cliente detrator é o consumidor que teve uma experiência ruim com uma empresa e possivelmente fará reclamações.</p>
+      </div>
+      <i class="bx-bx-trending-up"></i>
+     </div> 
+     <!-- <span class="progress" data-value="50"></span>
+     <span class="label">50%</span> -->
+  </div> 
+  <div class="card">
+    <div class="head">
+      <div>
+         <h2>icon face</h2>
+         <p>Muito Satisfeito</p>
+         <p>O cliente detrator é o consumidor que teve uma experiência ruim com uma empresa e possivelmente fará reclamações.</p>
+      </div>
+      <i class="bx-bx-trending-up"></i>
+     </div> 
+     <!-- <span class="progress" data-value="50"></span>
+     <span class="label">50%</span> -->
+  </div> 
+</div>
+</main>
+<div class="juntar">
+<div class="cardg">
+    <div id="piechart" style="width: 1000px; height: 500px;"></div>
+</div>
+<div class="legenda">
+  <?php
+  $objeto = new GraficosDao();
+
+  print_r('Muito Satisfeito = ' . $Res_mts);
+
+  print_r('Satisfeito = ' . $Res_s);
+
+  print_r('Neutro = ' . $Res_n);
+
+  print_r('Insatisfeito = ' . $Res_i);
+
+  print_r('Muito Insatisfeito = ' . $Res_mti);
+  
+  $mtsatisfeito = intval($Res_mts);
+  $satisfeito = intval($Res_s);
+  $neutro = intval($Res_n);
+  $insatisfeito = intval($Res_i);
+  $mtinsatisfeito = intval($Res_mti);
+  
+  $Total = $mtsatisfeito + $satisfeito + $neutro + $insatisfeito + $mtinsatisfeito;
+    
+    print_r('Nota CSAT = ' . number_format($Csat, 1, ',','.'));
+  
+  ?>
+</div>
+</div>  
   </body>
 </html>

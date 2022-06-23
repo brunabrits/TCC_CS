@@ -314,8 +314,21 @@
         .imgtest{
           width: 30vw;
         }
+
+
+        .texto-sub-email{
+            color: white; 
+        }
+
+        .texto-sub-email{
+            color: white; 
+        }
+
           }
         
+        .texto-sub-email{
+            color: white; 
+        }  
 
 
       </style>
@@ -461,15 +474,23 @@
           <div class="footer-col">
               <h4>Mensagem</h4>
               <!-- form sub -->
-              
-                    <div class="form-sub">
-                       <form method="post" action="email.php">
-                          <input  type="email" placeholder="Digite o seu e-mail" required><br><br>
-                  	      <textarea  id="mensagem" name="mensagem" placeholder="Digite sua mensagem" rows="3" cols="40"></textarea><br>
-                          <button class="btn btn-outline-light type="submit" name="Botao"">Enviar</button>
-                       </form>    
+
+              <div class="form-sub">
+                        <form action="https://formsubmit.co/customersuccessetec@gmail.com" method="POST" class="Form">
+                            <label class="texto-sub-email" for="name">Nome</label>
+                            <input type="text" name="name" id="name" required />
+                            <label  class="texto-sub-email" for="email">E-mail</label>
+                            <input type="email" name="email" id="email" required />
+                            <label class="texto-sub-email" for="message">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required rows="3"
+                                cols="40"></textarea><br>
+                            <input type="hidden" name="_captcha" value="false" />
+                            <input type="hidden" name="_next" value="http://127.0.0.1:80/TCC_CS/home.php" /> <!--Arrumar locaçaõ quando as paginas estiverem conectadas-->
+                            <button class="btn btn-outline-light" type="submit">Enviar</button>
+                        </form>
                     </div>
-               
+                   
+        
               <!-- end form sub -->
               
           </div> <!-- end footer col -->
