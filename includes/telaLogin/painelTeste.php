@@ -240,7 +240,7 @@
 }
 .home-section{
   position: relative;
-  background: #E4E9F7;
+  background: #c9afd3;
   height: 100vh;
   left: 260px;
   width: calc(100% - 260px);
@@ -294,18 +294,70 @@
           
     }
 
-    .imagem{
+    .texto2{
+          margin: 5%;
+          margin-top: 8%;
+          margin-right: 5%;
+          padding:10px;
+          display: inline-block;
+          width: 40%;
+          height: 60%;
+          font-size: 1.4vw;
+          
+        }
+
+    h2{
+        font-size: 3.8vw;
+        margin-bottom: 55px;
+        color: #c9afd3;
+        -webkit-text-stroke: 0.3vw #383d52;
+        text-transform: uppercase;
+      
+     }
+
+    img{
+         width:90%; 
+        }
+        
+    .test2{
         text-align: center;
-    }
+        padding-top: 35px;
+        margin-top: 0;
+        }
 
+    .fundo2{
+        background-color:#c9afd3 ;
+        height: 55vw; 
+        display: flex;
+        font-size: 20px;
+     }
 
+     @media (max-width: 1110px){
+          .fundo2{
+            flex-direction: column;  
+             height: 120vw; 
+            
+        }
+
+           .texto2{    
+             width: 80%;
+             padding-left: 40px;
+             font-size: 2.8vw;
+             text-align: center;    
+        }
+
+        .texto2 h2{
+          font-size: 6vw;
+        }
+
+ }
    </style>
 <body>
 
   <div class="sidebar close">
     <div class="logo-details">
       <i class='bx bxl-c-plus-plus'></i>
-      <span class="logo_name">Customer Success</span>
+      <span class="logo_name">S.O.S</span>
     </div>
     <ul class="nav-links">
       <li>
@@ -364,9 +416,24 @@
     <div class="home-content">
       <i class='bx bx-menu' ></i>
     </div>
-    <div class="imagem">
-      <img src="visual-data-animate (1).svg" alt="anim">
+
+
+    <section class="fundo2">
+    <div class="texto2">
+      <h2>Bem Vindo...</h2>
+      <p>Agora você poderá ter acesso as informações de todos os seus clientes,
+         analisando os feedbacks da sua empresa através dos gráficos,
+         além de escolher o formato ideal de pesquisa que será enviado.
+      </p>
     </div>
+
+    <div class="test2">  
+       <img src="visual-data-animate (1).svg" alt="anim">
+    </div>
+    </section>
+
+
+
   </section>
   <script>
   let arrow = document.querySelectorAll(".arrow");
@@ -383,7 +450,6 @@
     sidebar.classList.toggle("close");
   });
   </script>
-
 
 
 </body>

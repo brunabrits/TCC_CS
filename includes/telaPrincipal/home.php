@@ -53,9 +53,6 @@
         }     
 
         .test{
-        /*  display: inline-block;
-          width: 55%;
-       /*   height: 55%;*/
         text-align: center;
         padding-top: 35px;
         }
@@ -262,16 +259,6 @@
           font-size: 15px;
          
           }
-         
-
-         /* .footer-col .midias-sociais a i{
-          font-size: 15px;
-        }  */
-
-         /* .footer-col .midias-sociais a:hover{
-          color: rgb(75,0,130);
-          background-color: white;
-        }  */
 
          .icone{
         
@@ -281,12 +268,6 @@
           align-items: center;
        
         } 
-
-        /* display: inline-flex;
-          align-items: center;
-          justify-content: center; */
-
-
 
         /* footer responsivo */
 
