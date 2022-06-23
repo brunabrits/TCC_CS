@@ -43,13 +43,17 @@
         
         h2{
           font-size: 3vw;
-          margin-bottom: 55px;
+          margin-bottom: 20px;
+        }
+        
+        h6{
+          margin-left: 40%;
+          margin-bottom: 50px;
         }
       
         img{
          width:90%;
          
-      
         }     
 
         .test{
@@ -335,7 +339,8 @@
     
     <section class="fundo">
     <div class="texto">
-      <h2>Search of Success!</h2><!--<br><br>-->
+      <h2>Search of Success!</h2>
+      <h6>O Socorro para sua Empresa</h6>
       <p>O consumidor é o pilar principalmente para o crescimento de uma empresa, nesse caso,
         o Customer Success  busca garantir o sucesso do cliente ao adquirir serviço ou produto de uma determinada instituição, através de métricas, 
         que são responsáveis por verificar a experiência do cliente, promovendo o desenvolvimento contínuo do seu negócio.
