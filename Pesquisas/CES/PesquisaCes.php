@@ -32,8 +32,8 @@
     <input type="radio" name="ces" class="ball" value="5">5
     <br>
 
-    <label for="" class="escala">Muito esforço</label>
-    <label for="" class="escala2">Pouco esforço</label>
+    <label for="" class="escala">Pouco esforço</label>
+    <label for="" class="escala2">Muito esforço</label>
     <hr>
     <input type="submit" class="button" name="botao" value="Enviar">
     </form> 

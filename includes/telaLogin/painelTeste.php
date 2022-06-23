@@ -251,9 +251,9 @@
                     <i class='bx bxs-chevron-down arrow'></i>
                 </div>
                 <ul class="sub-menu">
-                    <li><a href="#">Pesquisa NPS</a></li>
-                    <li><a href="#">Pesquisa CES</a></li>
-                    <li><a href="#">pesquisa CSAT</a></li>
+                    <li><a href="../../TCC_CS/Pesquisas/NPS/PesquisaNps.php">Pesquisa NPS</a></li>
+                    <li><a href="../../TCC_CS/Pesquisas/CES/PesquisaCes.php">Pesquisa CES</a></li>
+                    <li><a href="../../TCC_CS/Pesquisas/CSAT/PesquisaCsat.php">pesquisa CSAT</a></li>
                 </ul>
             </li>
         </ul>
