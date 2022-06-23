@@ -326,31 +326,6 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item ">
-            <a class="nav-link" href="#">Plataforma</a>
-          </li>
-
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Clientes</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Pesquisas
-            </a>
-
-            <div class="dropdown-menu"  aria-labelledby="navbarDropdownMenuLink">
-              <h6 class="dropdown-header">Tipos de pesquisa</h6>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="../../TCC_CS/Pesquisas/NPS/PesquisaNps.php">Pesquisa NPS</a>
-              <a class="dropdown-item" href="../../TCC_CS/Pesquisas/CES/PesquisaCes.php">Pesquisa CES</a>
-              <a class="dropdown-item" href="../../TCC_CS/Pesquisas/CSAT/PesquisaCsat.php">Pesquisa CSAT</a>  
-            </div>
-          </li>
-        </ul>
-       
         <div class="ladinho">
           <button type="button" class="btn btn-outline-light  mr-3 "><a href="../TCC_CS/includes/telaLogin/entrar.php" style="text-decoration:none" >Login</a></button> 
           <button type="button" class="btn btn-outline-light" ><a href="../TCC_CS/Cadastro/telaCadastro.php" style="text-decoration:none" >Cadastre-se</a></button>
