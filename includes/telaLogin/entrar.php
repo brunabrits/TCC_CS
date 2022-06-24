@@ -31,7 +31,7 @@ session_start()
                 <button class="btn">Entrar</button>
 
                 <div class="conexao">
-                    <p>Manter-me conectado</p>
+                    <p>“Faça um cliente, não uma venda.”</p>
                 </div><!--fim conexao-->
 
                 <?php

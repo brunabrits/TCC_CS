@@ -105,11 +105,15 @@
            color: #666;
          }
 
+         .container .card .content p:hover{
+           color: white;
+         }
+
         .container .card:hover{
            background-color:  rgb(75,0,130);
            color: white;
            margin-top:-30px;
-           box-shadow: 2px 20px 25px #dc2e685d;
+           box-shadow: 2px 20px 25px white;
            border-color:  rgb(75,0,130);
         }
 
@@ -122,6 +126,7 @@
         .container .card:houver .content p{
           color: white;
         }
+        
 
         .balao {
           display:flex;
@@ -320,10 +325,6 @@
             color: white; 
         }
 
-        .texto-sub-email{
-            color: white; 
-        }
-
           }
         
         .texto-sub-email{
@@ -472,7 +473,7 @@
          <!-- end footer col -->
           <!--  footer col -->
           <div class="footer-col">
-              <h4>Mensagem</h4>
+              <h4>Fale Conosco</h4>
               <!-- form sub -->
 
               <div class="form-sub">
@@ -484,10 +485,13 @@
                             <label class="texto-sub-email" for="message">Mensagem</label>
                             <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required rows="3"
                                 cols="40"></textarea><br>
-                            <input type="hidden" name="_captcha" value="false" />
-                            <input type="hidden" name="_next" value="http://127.0.0.1:80/TCC_CS/home.php" /> <!--Arrumar locaçaõ quando as paginas estiverem conectadas-->
-                            <button class="btn btn-outline-light" type="submit">Enviar</button>
+                            <input type="hidden" name="_captcha" value="false" /> 
+                            <input type="hidden" name="_next" value="http://127.0.0.1:80/TCC_CS/"/ >   <!--Arrumar locaçaõ quando as paginas estiverem conectadas-->
+                           
+                            <button class="btn btn-outline-light" type="submit" name="botao" value="Enviar">Enviar</button>
                         </form>
+                     
+                       
                     </div>
                    
         

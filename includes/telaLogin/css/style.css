@@ -19,10 +19,10 @@ body{
 }
 
 input{
-    padding: 10px;
+    padding: 15px;
     border: none;
     outline: none;
-    width: 100px;
+    width: 200px;
 }
 
 .btn{
