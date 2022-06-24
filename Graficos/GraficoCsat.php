@@ -130,7 +130,8 @@ $Resultado=array($mtsatisfeito, $satisfeito, $neutro, $insatisfeito, $mtinsatisf
 
         var options = {
           title: 'Grafico CSAT',
-          colors: ['#00FF00','#7CFC00','yellow', '(139,0,0)', '#FF0000']
+          // colors: ['#00FF00','#7CFC00','yellow', '(139,0,0)', '#FF0000']
+          colors: ['rgb(92, 255, 230)','#3FD3FF', '#0063FC', '#8A3FFF', 'rgb(75,0,130)']
           
         };
 

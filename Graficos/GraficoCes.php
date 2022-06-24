@@ -134,7 +134,8 @@ $Resultado=array($mtfacil, $facil, $neutro, $dificil, $mtdificil);
 
         var options = {
           title: 'Gráfico CES',
-          colors: ['#00FF00','#7CFC00','yellow', '(139,0,0)', '#FF0000'],
+          // colors: ['#00FF00','#7CFC00','yellow', '(139,0,0)', '#FF0000']
+          colors: ['rgb(92, 255, 230)', 'rgb(75,0,130)', '#0063FC'],
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));

@@ -98,7 +98,8 @@ $Resultado=array($detrator, $neutro, $promotor);
         var options = {
           title: 'Gráfico NPS',
           pieHole: 0.4,
-          colors: ['#00008B','#DAA520','#800000']
+          // colors: ['#00008B','#DAA520','#800000']
+          colors: ['rgb(92, 255, 230)', '#0063FC','rgb(75,0,130)']
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
