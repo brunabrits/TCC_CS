@@ -105,7 +105,7 @@ catch(DivisionByZeroError $e){
     
   }
 
-$TCliente=array("Muito Facíl","Facíl", "Neutros", "Difícil", "Muito Difícil");
+$TCliente=array("Muito Fácil","Fácil", "Neutros", "Difícil", "Muito Difícil");
 $Resultado=array($mtfacil, $facil, $neutro, $dificil, $mtdificil);
 
 ?>
@@ -135,7 +135,7 @@ $Resultado=array($mtfacil, $facil, $neutro, $dificil, $mtdificil);
         var options = {
           title: 'Gráfico CES',
           // colors: ['#00FF00','#7CFC00','yellow', '(139,0,0)', '#FF0000']
-          colors: ['rgb(92, 255, 230)', 'rgb(75,0,130)', '#0063FC'],
+          colors: ['rgb(92, 255, 230)','#3FD3FF', '#0063FC', '#8A3FFF', 'rgb(75,0,130)'],
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -209,7 +209,7 @@ $Resultado=array($mtfacil, $facil, $neutro, $dificil, $mtdificil);
    </main>
    <div class="juntar">
    <div class="cardg">
-    <div id="piechart" style="width: 1000px; height: 500px;"></div>
+    <div id="piechart" style="width: 100%; height: 100%;"></div>
    </div> 
    <div class="legenda">
    <?php

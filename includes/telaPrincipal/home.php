@@ -346,8 +346,8 @@
 
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <div class="ladinho">
-          <button type="button" class="btn btn-outline-light  mr-3 "><a href="../TCC_CS/includes/telaLogin/entrar.php" style="text-decoration:none" >Login</a></button> 
-          <button type="button" class="btn btn-outline-light" ><a href="../TCC_CS/Cadastro/telaCadastro.php" style="text-decoration:none" >Cadastre-se</a></button>
+        <a href="../TCC_CS/includes/telaLogin/entrar.php" style="text-decoration:none" ><button type="button" class="btn btn-outline-light  mr-3 ">Login</button></a>
+        <a href="../TCC_CS/Cadastro/telaCadastro.php" style="text-decoration:none" ><button type="button" class="btn btn-outline-light" >Cadastre-se</button></a>
         </div><!--fim ladinho-->
       </div><!--fim collapse navbar-collapse-->
     </nav><!--fim nav-->

@@ -101,7 +101,7 @@ catch(DivisionByZeroError $e){
     
   }
 
-$TCliente=array("Muito Satisfeitos","Satisfeitos", "Neutros", "Insatisfeito", "Muito Insatisfeito");
+$TCliente=array("Muito Satisfeitos","Satisfeitos", "Neutros", "Insatisfeitos", "Muito Insatisfeitos");
 $Resultado=array($mtsatisfeito, $satisfeito, $neutro, $insatisfeito, $mtinsatisfeito);
 
 ?>
@@ -212,15 +212,15 @@ $Resultado=array($mtsatisfeito, $satisfeito, $neutro, $insatisfeito, $mtinsatisf
   <?php
   $objeto = new GraficosDao();
 
-  print_r('Muito Satisfeito = ' . $Res_mts);
+  print_r('Muito Satisfeitos = ' . $Res_mts);
 
-  print_r('Satisfeito = ' . $Res_s);
+  print_r('Satisfeitos = ' . $Res_s);
 
-  print_r('Neutro = ' . $Res_n);
+  print_r('Neutros = ' . $Res_n);
 
-  print_r('Insatisfeito = ' . $Res_i);
+  print_r('Insatisfeitos = ' . $Res_i);
 
-  print_r('Muito Insatisfeito = ' . $Res_mti);
+  print_r('Muito Insatisfeitos = ' . $Res_mti);
   
   $mtsatisfeito = intval($Res_mts);
   $satisfeito = intval($Res_s);
