@@ -99,7 +99,7 @@ $Logado = ($_SESSION['Usuario']);
 
     <section class="fundo2">
     <div class="texto2">
-      <h2>Bem Vindo...</h2>
+      <h2>Bem Vindo!</h2>
       <p>Agora você poderá ter acesso as informações de todos os seus clientes,
          analisando os feedbacks da sua empresa através dos gráficos,
          além de escolher o formato ideal de pesquisa que será enviado.

@@ -152,61 +152,55 @@ $Resultado=array($mtsatisfeito, $satisfeito, $neutro, $insatisfeito, $mtinsatisf
       <div>
          <h2>icon face</h2>
          <p>Muito Insatisfeito</p>
-         <p>Os clientes promotores são os consumidores que
-            sua empresa conseguiu fidelizar e que agem como verdadeiros propagadores do seu negócio.</p>
+         <p>O cliente está muito insatisfeito com a experiência que teve com sua empresa.
+         </p>
       </div>
       <i class="bx-bx-trending-up"></i>
      </div> 
-     <!-- <span class="progress" data-value="50"></span>
-     <span class="label">50%</span> -->
+     
   </div> 
   <div class="card">
     <div class="head">
       <div>
          <h2>icon face</h2>
          <p>Insatisfeito</p>
-         <p>Eles não estão propensos a fazer reclamações sobre a marca. Apesar disso, eles possivelmente também não serão consumidores frequentes.</p>
+         <p>O cliente está insatisfeito com a experiência que teve com sua empresa.</p>
       </div>
       <i class="bx-bx-trending-up"></i>
      </div> 
-     <!-- <span class="progress" data-value="50"></span>
-     <span class="label">50%</span> -->
+    
   </div> 
   <div class="card">
     <div class="head">
       <div>
          <h2>icon face</h2>
          <p>Indiferente</p>
-         <p>O cliente detrator é o consumidor que teve uma experiência ruim com uma empresa e possivelmente fará reclamações.</p>
+         <p>O cliente está indiferente com a experiência que teve com a empresa</p>
       </div>
       <i class="bx-bx-trending-up"></i>
      </div> 
-     <!-- <span class="progress" data-value="50"></span>
-     <span class="label">50%</span> -->
+     
   </div> 
   <div class="card">
     <div class="head">
       <div>
          <h2>icon face</h2>
          <p>Satisfeito</p>
-         <p>O cliente detrator é o consumidor que teve uma experiência ruim com uma empresa e possivelmente fará reclamações.</p>
+         <p>O cliente está satisfeito com a experiência que teve com sua empresa.</p>
       </div>
       <i class="bx-bx-trending-up"></i>
      </div> 
-     <!-- <span class="progress" data-value="50"></span>
-     <span class="label">50%</span> -->
+     
   </div> 
   <div class="card">
     <div class="head">
       <div>
          <h2>icon face</h2>
          <p>Muito Satisfeito</p>
-         <p>O cliente detrator é o consumidor que teve uma experiência ruim com uma empresa e possivelmente fará reclamações.</p>
+         <p>O cliente está muito satisfeito com a experiência que teve com sua empresa.</p>
       </div>
       <i class="bx-bx-trending-up"></i>
      </div> 
-     <!-- <span class="progress" data-value="50"></span>
-     <span class="label">50%</span> -->
   </div> 
 </div>
 </main>

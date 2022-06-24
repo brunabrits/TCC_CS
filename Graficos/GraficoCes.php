@@ -155,8 +155,7 @@ $Resultado=array($mtfacil, $facil, $neutro, $dificil, $mtdificil);
          <div>
             <h2>icon face</h2>
             <p>Muito Fácil</p>
-            <p>Os clientes promotores são os consumidores que
-               sua empresa conseguiu fidelizar e que agem como verdadeiros propagadores do seu negócio.</p>
+            <p>O cliente teve muita facilidade ao utilizar seu produto.</p>
          </div>
          <i class="bx-bx-trending-up"></i>
         </div> 
@@ -167,7 +166,7 @@ $Resultado=array($mtfacil, $facil, $neutro, $dificil, $mtdificil);
          <div>
             <h2>icon face</h2>
             <p>Fácil</p>
-            <p>Eles não estão propensos a fazer reclamações sobre a marca. Apesar disso, eles possivelmente também não serão consumidores frequentes.</p>
+            <p>O cliente teve facilidade ao utilizar seu produto.</p>
          </div>
          <i class="bx-bx-trending-up"></i>
         </div> 
@@ -178,7 +177,7 @@ $Resultado=array($mtfacil, $facil, $neutro, $dificil, $mtdificil);
          <div>
             <h2>icon face</h2>
             <p>Neutro</p>
-            <p>O cliente detrator é o consumidor que teve uma experiência ruim com uma empresa e possivelmente fará reclamações.</p>
+            <p>O cliente teve esforço razoável ao utilizar seu produto.</p>
          </div>
          <i class="bx-bx-trending-up"></i>
         </div> 
@@ -189,7 +188,7 @@ $Resultado=array($mtfacil, $facil, $neutro, $dificil, $mtdificil);
          <div>
             <h2>icon face</h2>
             <p>Difícil</p>
-            <p>Eles não estão propensos a fazer reclamações sobre a marca. Apesar disso, eles possivelmente também não serão consumidores frequentes.</p>
+            <p>O cliente teve dificuldade ao utilizar seu produto.</p>
          </div>
          <i class="bx-bx-trending-up"></i>
         </div> 
@@ -200,7 +199,7 @@ $Resultado=array($mtfacil, $facil, $neutro, $dificil, $mtdificil);
          <div>
             <h2>icon face</h2>
             <p>Muito Difícil</p>
-            <p>Eles não estão propensos a fazer reclamações sobre a marca. Apesar disso, eles possivelmente também não serão consumidores frequentes.</p>
+            <p>O cliente teve muita dificuldade ao utilizar seu produto.</p>
          </div>
          <i class="bx-bx-trending-up"></i>
         </div> 

@@ -44,7 +44,7 @@ main .card .head p {
     height: 7%;
     border-radius: 10px;
     text-align: center;
-    font-size: 45px;
+    font-size: 220%;
     box-shadow: 4px 4px 16px rgba(0, 0, 0, .05);
 }
 .cardg{
