@@ -21,7 +21,7 @@ session_start()
     </center>
 
     <section class="menu">
-        <form action="login.php" method="POST">
+        <form action="../../Backend/Login/login.php" method="POST">
             <div class="menu-login">
                 <h1>Login</h1>
 

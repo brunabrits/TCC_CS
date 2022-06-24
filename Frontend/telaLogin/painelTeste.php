@@ -40,7 +40,7 @@ $Logado = ($_SESSION['Usuario']);
     </div>
     <ul class="nav-links">
       <li>
-        <a href="../../Respostas/listagem.php">
+        <a href="../../Backend/Respostas/listagem.php">
           <i class='bx bx-grid-alt' ></i>
           <span class="link_name">Meus Clientes</span>
         </a>
@@ -58,9 +58,9 @@ $Logado = ($_SESSION['Usuario']);
         </div>
         <ul class="sub-menu">
           <li><a class="link_name" href="#">Gráficos</a></li>
-          <li><a href="../../graficos/graficoNps.php">NPS</a></li>
-          <li><a href="../../graficos/graficoCsat.php">CSAT</a></li>
-          <li><a href="../../graficos/graficoCes.php">CES</a></li>
+          <li><a href="../../Backend/Graficos/graficoNps.php">NPS</a></li>
+          <li><a href="../../Backend/Graficos/graficoCsat.php">CSAT</a></li>
+          <li><a href="../../Backend/Graficos/graficoCes.php">CES</a></li>
         </ul>
       </li>
       <li>
@@ -73,16 +73,16 @@ $Logado = ($_SESSION['Usuario']);
         </div>
         <ul class="sub-menu">
           <li><a class="link_name" href="#">Pesquisas existentes</a></li>
-          <li><a href="../../Pesquisas/NPS/PesquisaNps.php">NPS</a></li>
-          <li><a href="../../Pesquisas/CSAT/PesquisaCsat.php">CSAT</a></li>
-          <li><a href="../../Pesquisas/CES/PesquisaCes.php">CES</a></li>
+          <li><a href="../../Backend/Pesquisas/NPS/PesquisaNps.php">NPS</a></li>
+          <li><a href="../../Backend/Pesquisas/CSAT/PesquisaCsat.php">CSAT</a></li>
+          <li><a href="../../Backend/Pesquisas/CES/PesquisaCes.php">CES</a></li>
         </ul>
       </li>
       <li>
         
         <li>
             <div class="icon-link">
-               <a href="logout.php">
+               <a href="../../Backend/Login/logout.php">
                 <i class="fa-solid fa-arrow-right-from-bracket"></i>
                    <span class="link_name">Sair</span>
                </a>

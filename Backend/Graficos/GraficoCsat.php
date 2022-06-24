@@ -41,7 +41,7 @@ catch(DivisionByZeroError $e){
 
     public function buscarmts($mtsatisfeitos){
     
-      include_once '../Cadastro/conexao.php';
+      include_once '../../Database/conexao.php';
       $bd = new Conexao();
       $con = $bd->getConexao();
       $sql = "SELECT SUM(Tp_csat_mts) AS '{$mtsatisfeitos}' FROM csat";
@@ -53,7 +53,7 @@ catch(DivisionByZeroError $e){
 
     public function buscars($satisfeitos){
     
-      include_once '../Cadastro/conexao.php';
+      include_once '../../Database/conexao.php';
       $bd = new Conexao();
       $con = $bd->getConexao();
       $sql = "SELECT SUM(Tp_csat_s) AS '{$satisfeitos}' FROM csat";
@@ -65,7 +65,7 @@ catch(DivisionByZeroError $e){
 
     public function buscarn($neutros){
     
-      include_once '../Cadastro/conexao.php';
+      include_once '../../Database/conexao.php';
       $bd = new Conexao();
       $con = $bd->getConexao();
       $sql = "SELECT SUM(Tp_csat_n) AS '{$neutros}' FROM csat";
@@ -77,7 +77,7 @@ catch(DivisionByZeroError $e){
 
     public function buscari($insatisfeitos){
     
-      include_once '../Cadastro/conexao.php';
+      include_once '../../Database/conexao.php';
       $bd = new Conexao();
       $con = $bd->getConexao();
       $sql = "SELECT SUM(Tp_csat_i) AS '{$insatisfeitos}' FROM csat";
@@ -89,7 +89,7 @@ catch(DivisionByZeroError $e){
 
     public function buscarmti($mtinsatisfeitos){
     
-      include_once '../Cadastro/conexao.php';
+      include_once '../../Database/conexao.php';
       $bd = new Conexao();
       $con = $bd->getConexao();
       $sql = "SELECT SUM(Tp_csat_mti) AS '{$mtinsatisfeitos}' FROM csat";

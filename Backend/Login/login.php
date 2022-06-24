@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include "../../Cadastro/conexao.php";
+include "../../Database/conexao.php";
 
 $email = $_POST['email'];
 $senha = $_POST['senha'];
@@ -23,7 +23,7 @@ if($Linha > 0)
     $_SESSION['Usuario'] = $email;
     $_SESSION['Chave']   = $senha;
 
-    header('location:painelTeste.php');
+    header('location: ../../Frontend/telaLogin/painelTeste.php');
 }
 else
 {
@@ -32,5 +32,5 @@ else
     unset($_SESSION['Usuario']);
     unset($_SESSION['Chave']);
 
-    header('location:entrar.php');
+    header('location: ../../Frontend/telaLogin/entrar.php');
 }

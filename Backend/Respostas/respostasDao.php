@@ -1,6 +1,6 @@
 <?php
 
-include '../Cadastro/conexao.php';
+include '../../Database/conexao.php';
 
 class RespostasDao
 {

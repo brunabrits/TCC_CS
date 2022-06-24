@@ -45,7 +45,7 @@ catch(DivisionByZeroError $e){
 
     public function buscarmf($mtfacil){
     
-      include_once '../Cadastro/conexao.php';
+      include_once '../../Database/conexao.php';
       $bd = new Conexao();
       $con = $bd->getConexao();
       $sql = "SELECT SUM(Tp_ces_mf) AS '{$mtfacil}' FROM ces";
@@ -57,7 +57,7 @@ catch(DivisionByZeroError $e){
 
     public function buscarf($facil){
     
-      include_once '../Cadastro/conexao.php';
+      include_once '../../Database/conexao.php';
       $bd = new Conexao();
       $con = $bd->getConexao();
       $sql = "SELECT SUM(Tp_ces_f) AS '{$facil}' FROM ces";
@@ -69,7 +69,7 @@ catch(DivisionByZeroError $e){
 
     public function buscarn($neutros){
     
-      include_once '../Cadastro/conexao.php';
+      include_once '../../Database/conexao.php';
       $bd = new Conexao();
       $con = $bd->getConexao();
       $sql = "SELECT SUM(Tp_ces_n) AS '{$neutros}' FROM ces";
@@ -81,7 +81,7 @@ catch(DivisionByZeroError $e){
 
     public function buscard($dificil){
     
-      include_once '../Cadastro/conexao.php';
+      include_once '../../Database/conexao.php';
       $bd = new Conexao();
       $con = $bd->getConexao();
       $sql = "SELECT SUM(Tp_ces_d) AS '{$dificil}' FROM ces";
@@ -93,7 +93,7 @@ catch(DivisionByZeroError $e){
 
     public function buscarmd($mtdificil){
     
-      include_once '../Cadastro/conexao.php';
+      include_once '../../Database/conexao.php';
       $bd = new Conexao();
       $con = $bd->getConexao();
       $sql = "SELECT SUM(Tp_ces_md) AS '{$mtdificil}' FROM ces";

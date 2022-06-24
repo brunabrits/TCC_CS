@@ -34,7 +34,7 @@ catch(DivisionByZeroError $e){
 
     public function buscarp($promotores){
     
-      include_once '../Cadastro/conexao.php';
+      include_once '../../Database/conexao.php';
       $bd = new Conexao();
       $con = $bd->getConexao();
       $sql = "SELECT SUM(Tp_nps_promotor) AS '{$promotores}' FROM nps";
@@ -46,7 +46,7 @@ catch(DivisionByZeroError $e){
 
     public function buscarn($neutros){
     
-      include_once '../Cadastro/conexao.php';
+      include_once '../../Database/conexao.php';
       $bd = new Conexao();
       $con = $bd->getConexao();
       $sql = "SELECT SUM(Tp_nps_neutro) AS '{$neutros}' FROM nps";
@@ -58,7 +58,7 @@ catch(DivisionByZeroError $e){
 
     public function buscard($detratores){
     
-      include_once '../Cadastro/conexao.php';
+      include_once '../../Database/conexao.php';
       $bd = new Conexao();
       $con = $bd->getConexao();
       $sql = "SELECT SUM(Tp_nps_detrator) AS '{$detratores}' FROM nps";

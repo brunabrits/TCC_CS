@@ -1,6 +1,6 @@
 <?php 
 
-include 'conexao.php';
+include '../../Database/conexao.php';
 
 class ClienteDao
 {
@@ -19,7 +19,7 @@ class ClienteDao
 		if($resultado){
 			echo "Você se cadastrou";
 
-			header('location: ../includes/telaLogin/entrar.php');
+			header('location: ../../Frontend/telaLogin/entrar.php');
 		}else{
 			echo "Tente novamente";
 		}

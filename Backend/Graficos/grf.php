@@ -20,7 +20,7 @@ print_r('resultado contadordetratores = ' . $Res_d);
 
     public function buscar($Tipo){
     
-      include_once 'conexao.php';
+      include_once '../../Database/conexao.php';
       $bd = new Conexao();
       $con = $bd->getConexao();
 
