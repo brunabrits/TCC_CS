@@ -2,24 +2,33 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body{
-    background-color: #E9E1EC;
+    background-color: #c9afd3;
 }
 main .info-data{
-    margin-top: 10px;
-    margin-left: 32px;
+    margin-top: 0.5%;
+    margin-left: 2%;
     margin-right: 30px;
     display: inline-flex;
     align-items: center;
 }
 main .info-data .card{
     padding: 2%;
-    background: white;
     margin-left: 30px;
+    background-color: white;
     width: 30%;
     height: 10%;
     border-radius: 10px;
     box-shadow: 4px 4px 16px rgba(0, 0, 0, .05);
 }
+/* #card1{
+    background: rgb(92, 255, 230);
+}
+#card2{
+    background: #0063FC;
+}
+#card3{
+    background: rgb(75,0,130);
+} */
 main .card .head{
     display: flex;
     justify-content: space-between;
@@ -27,17 +36,18 @@ main .card .head{
 }
 main .card .head h2 {
     font-size: 30px;
-    font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
 }
 main .card .head p {
     font-size: 100%;
 }
 .title{
-    margin-left: 2%;
-    margin-top: 20px;
+    margin-left: 5%;
+    margin: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
     color: white;
-    width: 18%;
+    width: 30%;
     height: 7%;
     text-align: center;
     align-items: center;
@@ -59,15 +69,68 @@ main .card .head p {
     margin-top: 5%;
     align-items: center;
     margin-left: 50px;
-    width: 50%;
-    height: 30%;
+    width: 30%;
+    height: 10%;
     border-radius: 10px;
     background-color: white;
-    /* background: var(--light); */
+    text-align: center;
     box-shadow: 4px 4px 16px rgba(0, 0, 0, .05);
 }
 .juntar{
     display: inline-flex;
     width: 90%;
     height: 90%;
+}
+.icon{
+    width: 90px;
+}
+.bx bx-meh-alt:hover{
+    width: 50px;
+}
+
+@media (max-width: 768px){
+    .cardg{
+        padding: 2%;
+        margin-top: 5%;
+        align-items: center;
+        margin-left: 5%;
+        width: 100%;
+        height: 50%;
+        border-radius: 2%;
+        background-color: white;
+        box-shadow: 4px 4px 16px rgba(0, 0, 0, .05);
+    }
+
+    .legenda{
+        padding: 2%;
+        margin-top: 5%;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 0;
+        width: auto;
+        height: 30%;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 4px 4px 16px rgba(0, 0, 0, .05);
+    }
+
+    .juntar{
+        display: inline-flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    .title{
+        margin-left: 8%;
+        margin: 0;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        color: white;
+        width: 50%;
+        height: 7%;
+        text-align: center;
+        align-items: center;
+        font-size: 250%;
+    }
+
 }

@@ -105,14 +105,15 @@ catch(DivisionByZeroError $e){
     
   }
 
-$TCliente=array("Muito Fácil","Fácil", "Neutros", "Difícil", "Muito Difícil");
+$TCliente=array("Muito Fácil","Fácil", "Neutro", "Difícil", "Muito Difícil");
 $Resultado=array($mtfacil, $facil, $neutro, $dificil, $mtdificil);
 
 ?>
 
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="css/graficoCesT.css"/>  
+    <link rel="stylesheet" type="text/css" href="css/graficoCesT.css"/> 
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'> 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
@@ -153,55 +154,50 @@ $Resultado=array($mtfacil, $facil, $neutro, $dificil, $mtdificil);
      <div class="card">
        <div class="head">
          <div>
-            <h2>icon face</h2>
+         <i class='bx bx-happy-beaming' style='color:5CFFE6'></i>           
             <p>Muito Fácil</p>
             <p>O cliente teve muita facilidade ao utilizar seu produto.</p>
          </div>
-         <i class="bx-bx-trending-up"></i>
         </div> 
        
      </div> 
      <div class="card">
        <div class="head">
          <div>
-            <h2>icon face</h2>
+         <i class='bx bx-smile' style='color:3FD3FF'></i>
             <p>Fácil</p>
             <p>O cliente teve facilidade ao utilizar seu produto.</p>
          </div>
-         <i class="bx-bx-trending-up"></i>
         </div> 
         
      </div> 
      <div class="card">
        <div class="head">
          <div>
-            <h2>icon face</h2>
+         <i class='bx bx-meh-alt' style='color:#0063FC'></i>
             <p>Neutro</p>
             <p>O cliente teve esforço razoável ao utilizar seu produto.</p>
          </div>
-         <i class="bx-bx-trending-up"></i>
         </div> 
         
      </div> 
      <div class="card">
        <div class="head">
          <div>
-            <h2>icon face</h2>
+         <i class='bx bx-sad' style='color:8A3FFF'></i>
             <p>Difícil</p>
             <p>O cliente teve dificuldade ao utilizar seu produto.</p>
          </div>
-         <i class="bx-bx-trending-up"></i>
         </div> 
         
      </div> 
      <div class="card">
        <div class="head">
          <div>
-            <h2>icon face</h2>
+         <i class='bx bx-angry' style='color:#4b0082' ></i>
             <p>Muito Difícil</p>
             <p>O cliente teve muita dificuldade ao utilizar seu produto.</p>
          </div>
-         <i class="bx-bx-trending-up"></i>
         </div> 
         
      </div> 

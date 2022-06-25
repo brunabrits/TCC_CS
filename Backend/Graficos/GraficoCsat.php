@@ -101,7 +101,7 @@ catch(DivisionByZeroError $e){
     
   }
 
-$TCliente=array("Muito Satisfeitos","Satisfeitos", "Neutros", "Insatisfeitos", "Muito Insatisfeitos");
+$TCliente=array("Muito Satisfeito","Satisfeito", "Indiferente", "Insatisfeito", "Muito Insatisfeito");
 $Resultado=array($mtsatisfeito, $satisfeito, $neutro, $insatisfeito, $mtinsatisfeito);
 
 ?>
@@ -109,6 +109,7 @@ $Resultado=array($mtsatisfeito, $satisfeito, $neutro, $insatisfeito, $mtinsatisf
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="css/graficoCsatT.css"/>  
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
@@ -150,77 +151,68 @@ $Resultado=array($mtsatisfeito, $satisfeito, $neutro, $insatisfeito, $mtinsatisf
   <div class="card">
     <div class="head">
       <div>
-         <h2>icon face</h2>
-         <p>Muito Insatisfeito</p>
-         <p>O cliente está muito insatisfeito com a experiência que teve com sua empresa.
+      <i class='bx bx-happy-beaming' style='color:5CFFE6'></i>
+         <p>Muito Satisfeito</p>
+         <p>O cliente está muito satisfeito com a experiência que teve com sua empresa.
          </p>
       </div>
-      <i class="bx-bx-trending-up"></i>
      </div> 
-     
   </div> 
   <div class="card">
     <div class="head">
       <div>
-         <h2>icon face</h2>
-         <p>Insatisfeito</p>
-         <p>O cliente está insatisfeito com a experiência que teve com sua empresa.</p>
-      </div>
-      <i class="bx-bx-trending-up"></i>
-     </div> 
-    
-  </div> 
-  <div class="card">
-    <div class="head">
-      <div>
-         <h2>icon face</h2>
-         <p>Indiferente</p>
-         <p>O cliente está indiferente com a experiência que teve com a empresa</p>
-      </div>
-      <i class="bx-bx-trending-up"></i>
-     </div> 
-     
-  </div> 
-  <div class="card">
-    <div class="head">
-      <div>
-         <h2>icon face</h2>
+      <i class='bx bx-smile' style='color:3FD3FF'></i>
          <p>Satisfeito</p>
          <p>O cliente está satisfeito com a experiência que teve com sua empresa.</p>
       </div>
-      <i class="bx-bx-trending-up"></i>
      </div> 
-     
   </div> 
   <div class="card">
     <div class="head">
       <div>
-         <h2>icon face</h2>
-         <p>Muito Satisfeito</p>
-         <p>O cliente está muito satisfeito com a experiência que teve com sua empresa.</p>
+      <i class='bx bx-meh-alt' style='color:#0063FC'></i>
+         <p>Indiferente</p>
+         <p>O cliente está indiferente com a experiência que teve com a empresa</p>
       </div>
-      <i class="bx-bx-trending-up"></i>
+     </div> 
+  </div> 
+  <div class="card">
+    <div class="head">
+      <div>
+      <i class='bx bx-sad' style='color:8A3FFF'></i>
+         <p>Insatisfeito</p>
+         <p>O cliente está insatisfeito com a experiência que teve com sua empresa.</p>
+      </div>
+     </div> 
+  </div> 
+  <div class="card">
+    <div class="head">
+      <div>
+      <i class='bx bx-angry' style='color:#4b0082' ></i>
+         <p>Muito Insatisfeito</p>
+         <p>O cliente está muito insatisfeito com a experiência que teve com sua empresa.</p>
+      </div>
      </div> 
   </div> 
 </div>
 </main>
 <div class="juntar">
 <div class="cardg">
-    <div id="piechart" style="width: 1000px; height: 500px;"></div>
+    <div id="piechart" style="width: 100%; height: 100%;"></div>
 </div>
 <div class="legenda">
   <?php
   $objeto = new GraficosDao();
 
-  print_r('Muito Satisfeitos = ' . $Res_mts);
+  print_r('Muito Satisfeito = ' . $Res_mts);
+ 
+  print_r('Satisfeito = ' . $Res_s);
 
-  print_r('Satisfeitos = ' . $Res_s);
+  print_r('Indiferente = ' . $Res_n);
 
-  print_r('Neutros = ' . $Res_n);
+  print_r('Insatisfeito = ' . $Res_i);
 
-  print_r('Insatisfeitos = ' . $Res_i);
-
-  print_r('Muito Insatisfeitos = ' . $Res_mti);
+  print_r('Muito Insatisfeito = ' . $Res_mti);
   
   $mtsatisfeito = intval($Res_mts);
   $satisfeito = intval($Res_s);

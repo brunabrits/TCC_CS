@@ -9,25 +9,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding-top: 40px; /*3%*/
-    width:400px ;/*65%*/
-    height:400px ;
+    padding: 40px;
     border-radius: 20px;
     color: white;
     margin-top: 6%;
-    justify-content: center ;
-    align-items: center;
  }
- .col-md-12{
-    justify-content: center ;
-    align-items: center;
-    width: 100%;
-}
+ 
  
 .form-control{
     padding: 15px;
     border-radius: 20px;
     width: 250px;
+    border: none;
 }
 
  div.row{
@@ -46,7 +39,7 @@ input.btn.btn-success{
     border: none;
     color: white;
     padding: 15px;
-    width: 80%;
+    width: 100%;
     border-radius: 20px;
     font-size: 17px;
     cursor: pointer;

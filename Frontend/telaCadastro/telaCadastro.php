@@ -14,7 +14,7 @@
 <div class="container">
 	<br>
 	<h1>Sistema de Cadastro</h1>
-	<br>
+	
 	<div class="row">
 		<div class="col-md-12">
 			<form action="../../Backend/Cadastro/controle.php" method="GET">

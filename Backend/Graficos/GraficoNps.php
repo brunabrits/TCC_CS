@@ -77,6 +77,7 @@ $Resultado=array($detrator, $neutro, $promotor);
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="css/graficosNpsT.css"/>  
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load("current", {packages:["corechart"]});
@@ -112,48 +113,44 @@ $Resultado=array($detrator, $neutro, $promotor);
    <h1 class="title">Gráfico NPS</h1>
    
    <div class="info-data">
-   <div class="card">
+   <div class="card" id="card1">
        <div class="head">
          <div>
-            <h2>icon</h2>
+         <i class='bx bx-smile' style='color:5CFFE6'></i>
             <p>Promotores</p>
             <p>Os clientes promotores são os consumidores que
                sua empresa conseguiu fidelizar e que agem como verdadeiros propagadores do seu negócio.</p>
          </div>
-         <i class="bx-bx-trending-up"></i>
         </div> 
-        <!-- <span class="progress" data-value="50"></span>
-        <span class="label">50%</span> -->
+        
      </div> 
-     <div class="card">
+     <div class="card" id="card2">
        <div class="head">
          <div>
-            <h2>icon</h2>
+         <div class="icon">
+         <i class='bx bx-meh-alt' style='color:#0063FC'></i>
+         </div>
             <p>Neutros</p>
             <p>Eles não estão propensos a fazer reclamações sobre a marca. Apesar disso, eles possivelmente também não serão consumidores frequentes.</p>
          </div>
-         <i class="bx-bx-trending-up"></i>
         </div> 
-        <!-- <span class="progress" data-value="50"></span>
-        <span class="label">50%</span> -->
+      
      </div> 
-     <div class="card">
+     <div class="card" id="card3">
        <div class="head">
          <div>
-            <h2>icon</h2>
+         <i class='bx bx-sad' style='color:#4b0082'  ></i>
             <p>Detratores</p>
             <p>O cliente detrator é o consumidor que teve uma experiência ruim com uma empresa e possivelmente fará reclamações.</p>
          </div>
-         <i class="bx-bx-trending-up"></i>
         </div> 
-        <!-- <span class="progress" data-value="50"></span>
-        <span class="label">50%</span> -->
+        
      </div> 
    </div>
    </main>
    <div class="juntar">
      <div class="cardg">
-       <div id="donutchart" style="width: 1000px; height: 500px;"></div>
+       <div id="donutchart" style="width: 100%; height: 100%;"></div>
     </div> 
     <div class="legenda">
       <?php
