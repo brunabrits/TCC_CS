@@ -27,9 +27,8 @@
 
       <ul id="nav-mobile" class="left hide-on-med-and-down">
 
-        <li><a href="../includes/telaLogin/painelTeste.php">Home</a></li>
-        <li><a href="badges.html">Dashboards</a></li>
-        <li><a href="">Pesquisas</a></li>
+        <li><a href="../../Frontend/telaLogin/painelTeste.php">Home</a></li>
+        
 
       </ul>
 
